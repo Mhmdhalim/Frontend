@@ -1,4 +1,4 @@
-@media (max-width: 375px) {
+@media (min-width: 375px) {
     /* Apply mobile-specific styles here */
     body {
             width: 100%;
