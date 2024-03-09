@@ -2,9 +2,6 @@
 
 ## Welcome! 👋
 
-<detail> svs </detail>
-
-
   
 Thanks for checking out this front-end coding challenge.
 
