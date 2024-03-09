@@ -2,7 +2,7 @@
 
 ## Welcome! 👋
 
-<detail>
+<detail> sv <detail>
   
 Thanks for checking out this front-end coding challenge.
 
