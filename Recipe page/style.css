@@ -1,63 +1,74 @@
 @media (max-width: 375px) {
     /* Apply mobile-specific styles here */
-    body{
-        background-color: hsl(332, 79%, 59%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    nav, article{
-        width:fit-content;
-        font-size: 16px;
-        font-family: "Young Serif", serif;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1.6;
-    }
-
-    main{
-        width: fit-content;
-        text-align: left;
-        background-color: hsl(330, 100%, 98%);
-        border-radius:3%;
-  
-        padding: 40px;
-    }
-    figure img{
-        border-radius: 4%;
-    }
-
-    h3 {
-        color: hsl(294, 78%, 47%);
-    }
-    h2, .amount {
-        color: hsl(332, 79%, 59%);
-    }
-
-
-    table {
-            width: 80%;
-    }
+    body {
+            width: 100%;
+            background-color: hsl(332, 79%, 59%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
     
-    th, td {
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-        text-align: left;
-    }
-    hr{
-        border: 1px solid #dddddd65;
-    }
-    a{
-        text-decoration: none;
-    }
+        nav,
+        article {
+            width: fit-content;
+            font-size: 16px;
+            font-family: "Young Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.6;
+        }
+    
+        main {
+            height: fit-content;
+            width: 30%;
+            text-align: left;
+            background-color: hsl(330, 100%, 98%);
+            border-radius: 3%;
+        }
+    
+        figure img {
+            width: 100%;
+            border-radius: 4%;
+        }
+    
+        h3 {
+            color: hsl(294, 78%, 47%);
+        }
+    
+        h2,
+        .amount {
+            color: hsl(332, 79%, 59%);
+        }
+    
+    
+        table {
+            width: 80%;
+        }
+    
+        th,
+        td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+    
+        hr {
+            border: 1px solid #dddddd65;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+
 }
 
 
 @media (min-width: 1440px) {
     /* Apply styles for desktop screens */
     body{
+        width: 100%;
         background-color: hsl(332, 79%, 59%);
         display: flex;
         justify-content: center;
@@ -75,7 +86,8 @@
     }
 
     main{
-        width: fit-content;
+        height: fit-content;
+        width: 33%;
         text-align: left;
         background-color: hsl(330, 100%, 98%);
         border-radius:3%;
@@ -83,6 +95,7 @@
         padding: 40px;
     }
     figure img{
+        width: 100%;
         border-radius: 4%;
     }
 
@@ -112,6 +125,3 @@
 
          
 }
-
-
-
