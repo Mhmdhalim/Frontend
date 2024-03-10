@@ -61,10 +61,10 @@ a {
     text-decoration: none;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
 
     /* Your CSS rules for mobile layout */
-    .body {
+    .container, body {
         max-width: 375px;
         /* Set container width to 90% of the viewport width */
     }
