@@ -64,7 +64,7 @@ a {
 @media (min-width: 576px) {
 
     /* Your CSS rules for mobile layout */
-    .container {
+    .body {
         max-width: 375px;
         /* Set container width to 90% of the viewport width */
     }
@@ -73,7 +73,7 @@ a {
 @media (min-width: 992px) {
 
     /* Your CSS rules for mobile layout */
-    .container {
+    .body {
         max-width: 1440px;
         /* Set container width to 90% of the viewport width */
     }
