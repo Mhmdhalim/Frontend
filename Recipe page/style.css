@@ -60,11 +60,19 @@ hr {
 a {
     text-decoration: none;
 }
+.SFirst{
+    background-color: #f04cd710;
 
+}
+.SFirst section{
+    padding: 1px;
+    margin-left: 2vw;
+}
 @media (max-width: 576px) {
 
     /* Your CSS rules for mobile layout */
-    .container, body {
+    .container,
+    body {
         max-width: 375px;
         /* Set container width to 90% of the viewport width */
     }
