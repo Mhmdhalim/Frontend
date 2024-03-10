@@ -64,10 +64,11 @@ a {
 @media only screen and (max-width: 375px) {
     /* Your CSS rules for mobile layout */
     .body {
-        width: auto; /* Set container width to 90% of the viewport width */
+        width: 375px; /* Set container width to 90% of the viewport width */
     }
     .main {
+        height: fit-content;
         width: auto; /* Set sidebar width to 30% of the viewport width */
-    }
+     }
 }
 
