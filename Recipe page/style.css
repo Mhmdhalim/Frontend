@@ -61,4 +61,13 @@ a {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 375px) {
+    /* Your CSS rules for mobile layout */
+    .body {
+        width: 90%; /* Set container width to 90% of the viewport width */
+    }
+    .main {
+        width: 30%; /* Set sidebar width to 30% of the viewport width */
+    }
+}
 
