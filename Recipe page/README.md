@@ -1,8 +1,7 @@
 # Frontend Mentor - Recipe page
 
-# [DEMO](https://mhmdhalim.github.io/Frontend/Recipe%20page/)
-
-## Welcome! 👋
+# [DEMO ON DESKTOP](https://mhmdhalim.github.io/Frontend/Recipe%20page/)
+> ## Welcome! 👋
 
   
 Thanks for checking out this front-end coding challenge.
@@ -89,3 +88,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
+ 
