@@ -59,7 +59,11 @@ p{
 }
 p:first-of-type{
     color: chartreuse;
+<<<<<<< HEAD
     margin-bottom: 3%;
+=======
+    margin-bottom: 4%;
+>>>>>>> 684c107706a3fb267797b45ce36a25a32d20147e
 }
 
 @media (min-width: 1440px) {
