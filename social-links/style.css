@@ -59,16 +59,19 @@ p{
 }
 p:first-of-type{
     color: chartreuse;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
 }
 
 @media (min-width: 1440px) {
     .container{
-        width: 80%;
+        margin: 10%;
+        width: 40%;
+        height: fit-content;
     }
     .links button {
         height: 4vh;
         font-size: 40px;
+        width: 60%;
     }
     body{
         font-size: 40px;
