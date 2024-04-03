@@ -5,6 +5,13 @@
 
 /* font AWEsome https: //fontawesome.com/start/confirm */
 
+* {
+    box-sizing: border-box;
+    font-family: monospace, serif;
+    padding: 0;
+    margin: 0;
+}
+
 :root{
     /* fonts */
     --main-font: "Montserrat", 'sans-serif';
@@ -56,6 +63,7 @@ img{
     max-width: var(--main-width);
     border-top-left-radius: 6%;
     border-bottom-left-radius: 6%;
+    object-fit: cover;
 }
 section{
     display: flex;
@@ -108,6 +116,7 @@ p{
     font-family: var(--main-font);
     font-size: 14px;
     margin-top: 10px;
+    text-decoration: line-through;
 }
 button{
     font-family: var(--main-font);
@@ -117,6 +126,11 @@ button{
     height: 50px;
     border-radius: 8px;    
     border-color: transparent;
+    cursor: pointer;
 }
-/* Mobile: 375px - Desktop: 1440px */
 
+@media screen and (min-width:600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
