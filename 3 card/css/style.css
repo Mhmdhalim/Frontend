@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat",sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Fraunces",serif; */
+
+/* font AWEsome https: //fontawesome.com/start/confirm */
+
+* {
+    box-sizing: border-box;
+    font-family: monospace, serif;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* fonts */
+    --main-font: "Montserrat", 'sans-serif';
+    --secoundry-font: "Fraunces", 'serif';
+    --main-width: 290px;
+    --main-height: 500px;
+    --main-margin: 30px;
+    /* Colores */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
