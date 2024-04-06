@@ -1,5 +1,5 @@
 # Frontend Mentor - 3-column preview card component
-# [DEMO on desktop] (https://mhmdhalim.github.io/Frontend/3%20card/)
+# [DEMO on desktop](https://mhmdhalim.github.io/Frontend/3%20card/)
 ![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
