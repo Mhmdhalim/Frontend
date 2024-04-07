@@ -10,7 +10,10 @@
 }
 
 :root{
-
+    /* image */
+    --height-img: 45px;
+    --margin-right-img: 10px;
+    --border-radius-img: 50%;
      /* Primary */
     --Moderate-violet: hsl(263, 55%, 52%);
     --Very-dark-grayish-blue: hsl(217, 19%, 35%);
@@ -180,13 +183,33 @@ body{
 }
 /* end qoute */
 
-img{
+.Daniel-Clifford img{
     height: 45px;
     margin-right: 10px;
     border-radius: 50%;
     border: solid hsl(263deg 64.49% 72.28% / 57%) 3px;
     
 }
+
+.Daniel-Clifford img{
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: solid hsl(263deg 64.49% 72.28% / 57%) 3px;
+    
+}
+img{
+    height: var(--height-img);
+    margin-right: var(--margin-right-img);
+    border-radius: var(--border-radius-img);
+}
+.Daniel-Clifford img, .Patrick-Abrams img{
+    border: solid hsl(263deg 64.49% 72.28% / 57%) 3px;
+}
+.Jonathan-Walters img, .Kira-Whittle img, .Jeanette-Harmon img{
+    border: solid var(--Light-grayish-blue) 3px;
+}
+
 .info {
     margin: 10px;
     padding: 10px;
