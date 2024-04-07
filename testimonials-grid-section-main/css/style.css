@@ -20,6 +20,10 @@
     /* Neutral */
     --Light-gray: hsl(0, 0%, 81%);
     --Light-grayish-blue: hsl(210, 46%, 95%);
+
+
+    --opacity-verfied: 50%;
+    --opacity-paragraph: 70%;
 }
 
 html,body{
@@ -39,18 +43,19 @@ body{
 .container{
     background-color: var(--Light-grayish-blue);
     height: 80vh;
+    
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
-    "danial danial danial Jonathan Jonathan Jeanette"
-    "Patrick Patrick Kira Kira Kira Jeanette "
+    "danial danial danial Jonathan Jonathan Kira"
+    "Jeanette Jeanette Patrick Patrick Patrick Kira"
     ;
     gap: 15px;
 
 }
 
-.container div{
+.container .div0{
     float: center;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -64,17 +69,17 @@ body{
     background-color: var(--Very-dark-grayish-blue);
     grid-area: Jonathan;
 }
+.Kira-Whittle{
+    background-color: var(--White);
+    grid-area: Kira;
+}
+.Patrick-Abrams{
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: Patrick;
+}
 .Jeanette-Harmon{
     background-color: var(--White);
     grid-area: Jeanette;
-}
-.Patrick-Abrams{
-    background-color: var(--White);
-    grid-area: Patrick;
-}
-.Kira-Whittle{
-    background-color: var(--Very-dark-blackish-blue);
-    grid-area: Kira;
 }
 /* 
 .Daniel-Clifford{
@@ -116,32 +121,94 @@ body{
     }
     .container .card {
         padding: 10px;
-        margin: 10px ;
+        margin: 10px;
         width: 100%;
         min-width: 200px;
     }
-        
+    
     .Daniel-Clifford{
+        background-image: url(../images/bg-pattern-quotation.svg);
         background-color: var(--Moderate-violet);
         grid-area: w1;
     }
+
     .Jonathan-Walters{
         background-color: var(--Very-dark-grayish-blue);
         grid-area: w2;
     }
-    .Jeanette-Harmon{
+    .Kira-Whittle{
         background-color: var(--White);
         grid-area: w3;
     }
-    .Patrick-Abrams{
+    .Jeanette-Harmon{
         background-color: var(--White);
         grid-area: w4;
     }
-    .Kira-Whittle{
+    .Patrick-Abrams{
         background-color: var(--Very-dark-blackish-blue);
         grid-area: w5;
     }
 }
+
+/*  START global opacity for verified and paragraph */
+.Verified{
+    color: var(--Light-gray);
+    opacity: var(--opacity-verfied);
+}
+.paragraph{
+    color: var(--Light-gray);
+    opacity: var(--opacity-paragraph);
+}
+/* END */
+/* h3 */
+.Daniel-Clifford h3, .Jonathan-Walters h3, .Patrick-Abrams h3{
+    color: var(--Light-gray);
+}
+
+.Kira-Whittle h3, .Jeanette-Harmon h3{
+    color: var(--Very-dark-blackish-blue);
+}
+/* end h3 */
+
+/* Qoute */
+.Daniel-Clifford .qoute, .Jonathan-Walters .qoute, .Patrick-Abrams .qoute{
+    font-size: ;
+    color: var(--White);
+}
+.Kira-Whittle .qoute, .Jeanette-Harmon .qoute{
+    color: var(--Very-dark-blackish-blue);
+}
+/* end qoute */
+
+img{
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: solid hsl(263deg 64.49% 72.28% / 57%) 3px;
+    
+}
+.info {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+.name{
+    padding: 8px;
+}
+
+.qoute ,.paragraph{
+    margin: 10px;
+    margin-left: 18px;
+    padding: 5px;
+
+}
+.qoute{
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+
 @media (min-width: 768px){
     .container{
         width: 750px;
