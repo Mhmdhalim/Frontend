@@ -235,6 +235,7 @@ img{
 @media (min-width: 768px){
     .container{
         width: 500px;
+        width: 100%;
     }
 }
 
