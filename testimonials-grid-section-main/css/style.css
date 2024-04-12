@@ -103,55 +103,7 @@ body{
 } */
 
 
-/* Small */
 
-@media (max-width: 768px){
-   
-    .container {
-        display: grid;
-        grid-template-columns: 90vw;
-        grid-template-rows: repeat(5, 1fr);
-        width: 90vw;
-        margin: 10px 0;
-        overflow-y: scroll;
-        grid-template-areas:
-        "w1"
-        "w2"
-        "w3"
-        "w4"
-        "w5"
-        ;
-    }
-    .container .card {
-        padding: 10px;
-        margin: 10px;
-        width: 100%;
-        min-width: 200px;
-    }
-    
-    .Daniel-Clifford{
-        background-image: url(../images/bg-pattern-quotation.svg);
-        background-color: var(--Moderate-violet);
-        grid-area: w1;
-    }
-
-    .Jonathan-Walters{
-        background-color: var(--Very-dark-grayish-blue);
-        grid-area: w2;
-    }
-    .Kira-Whittle{
-        background-color: var(--White);
-        grid-area: w3;
-    }
-    .Jeanette-Harmon{
-        background-color: var(--White);
-        grid-area: w4;
-    }
-    .Patrick-Abrams{
-        background-color: var(--Very-dark-blackish-blue);
-        grid-area: w5;
-    }
-}
 
 /*  START global opacity for verified and paragraph */
 .Verified{
@@ -175,7 +127,7 @@ body{
 
 /* Qoute */
 .Daniel-Clifford .qoute, .Jonathan-Walters .qoute, .Patrick-Abrams .qoute{
-    font-size: ;
+    font-size: var(--);
     color: var(--White);
 }
 .Kira-Whittle .qoute, .Jeanette-Harmon .qoute{
@@ -229,13 +181,61 @@ img{
     font-weight: 500;
     font-size: 22px;
 }
+/* Small */
 
+@media (max-width: 768px){
 
+    .container {
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: repeat(5, 1fr);
+        width: 90vw;
+        margin: 10px 0;
+        padding: 0;
+        grid-template-areas:
+        "w1"
+        "w2"
+        "w3"
+        "w4"
+        "w5"
+        ;
+    }
+    .container .card {
+        padding: 10px;
+        margin: 10px;
+        margin-left: 0;
+        width: 100%;
+        min-width: 200px;
+    }
+    
+    .Daniel-Clifford{
+        background-image: url(../images/bg-pattern-quotation.svg);
+        background-color: var(--Moderate-violet);
+        grid-area: w1;
+    }
+
+    .Jonathan-Walters{
+        background-color: var(--Very-dark-grayish-blue);
+        grid-area: w2;
+    }
+    .Kira-Whittle{
+        background-color: var(--White);
+        grid-area: w3;
+    }
+    .Jeanette-Harmon{
+        background-color: var(--White);
+        grid-area: w4;
+    }
+    .Patrick-Abrams{
+        background-color: var(--Very-dark-blackish-blue);
+        grid-area: w5;
+    }
+}
 
 @media (min-width: 768px){
     .container{
-        width: 500px;
-        width: 100%;
+        width: 750px;
+        
     }
 }
 
