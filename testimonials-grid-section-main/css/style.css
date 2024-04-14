@@ -46,7 +46,6 @@ body{
 .container{
     background-color: var(--Light-grayish-blue);
     height: 80vh;
-    
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
