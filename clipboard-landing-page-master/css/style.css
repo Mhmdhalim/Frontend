@@ -429,6 +429,19 @@ img{
     }
 
 }
+@media (min-width: 1600px){
+    .computer-img{
+        padding: 0;
+        margin: 0;
+        margin-left: -240px;
+        width: 70%;
+        background-image: url(../images/image-computer.png);
+        height: 572px;
+        background-position: right;
+        background-repeat: no-repeat;
+        transition: all .3s ease-in-out;
+    }
+}
 
 @media (max-width: 600px){
     
