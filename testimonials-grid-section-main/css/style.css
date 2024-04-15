@@ -190,6 +190,7 @@ img{
         grid-template-rows: repeat(5, 1fr);
         width: 90vw;
         margin: 10px 0;
+        border-bottom: 20px white solid;
         padding: 0;
         grid-template-areas:
         "w1"
@@ -226,7 +227,8 @@ img{
         grid-area: w4;
     }
     .Patrick-Abrams{
-        background-color: var(--Very-dark-blackish-blue);
+        padding-bottom: 100px;
+        background-color: var(ish-blue);
         grid-area: w5;
     }
 }
@@ -234,7 +236,6 @@ img{
 @media (min-width: 768px){
     .container{
         width: 750px;
-        
     }
 }
 
