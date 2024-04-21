@@ -54,7 +54,8 @@ body{
     "Jeanette Jeanette Patrick Patrick Patrick Kira"
     ;
     gap: 15px;
-
+    padding: 5px;
+    margin-top: 5px;
 }
 
 .container .div0{
