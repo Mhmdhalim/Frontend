@@ -3,7 +3,7 @@ I create some of projects.
 
 ## DEMOES
 ### EASY (NEWBIE)
-  1. [Social-links-patch](https://mhmdhalim.github.io/Frontend/social-links-patch/)
+  1. [Social-links-patch](https://mhmdhalim.github.io/Frontend/social-links-patch/)/
      I made this project by bootsratp.
   
 ### JUNIOR
