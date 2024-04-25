@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Clipboard landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 499px){
+            .card{
+                max-width: 250px; width: 100%; max-height: 550px; height: 100%;
+            }
+        }
+        @media (min-width: 500px){
+            .card{
+                max-width: 200px; width: 100%; max-height: 550px; height: 100%;
+            }
+        }
+        @media (min-width: 800px){
+            .card{
+                max-width: 300px; width: 100%; max-height: 550px;  height: 100%;
+            }
+        }
+        @media (min-width: 1440px){
+            .card{
+                width: 100%; height: 100%;
+            }
+        }
+        .btn{
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
+        .btn:hover{
+            background-color: white;
+            color:  rgb(157, 206, 248);
+        }
+/* 
+        figure::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(157, 206, 248);
+            width: 100%;
+            height: 20%;
+            border-radius: 5px 5px 0 0;
+        } */
+    </style>
+    <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-primary vh-100 d-flex justify-content-center align-items-center">
+        <div class="card p-2 text-white" style="background-color: rgb(20, 20, 193);">
+            <header class="d-flex flex-column justify-content-center align-items-center">
+                <figure>
+                    <img class="rounded-circle position-relative" src="./avatar-jessica.jpeg " alt="avatar-jessica" style="width: 100px;">
+                </figure>
+                <div class="h2 fs-3 ">Jassica</div>
+                <p class="address text-center" style="color: rgb(157, 206, 248);">London, United Kingdom</p>
+                <p class="information text-center">"Front-end developer and avid reader."</p>
+            </header>
+            <section class="links d-flex flex-column">
+                <button type="btn btn-link" class="btn no-decoration btn-primary border-primary rounded m-2">GitHub</button>
+                <button type="btn btn-link" class="btn no-decoration btn-primary border-primary rounded m-2">LinkedIn</button>
+                <button type="btn btn-link" class="btn no-decoration btn-primary border-primary rounded m-2">Twitter</button>
+                <button type="btn btn-link" class="btn no-decoration btn-primary border-primary rounded m-2">Instagram</button>
+                <button type="btn btn-link" class="btn no-decoration btn-primary border-primary rounded m-2">Frontend Mentor</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+</body>
+</html>
