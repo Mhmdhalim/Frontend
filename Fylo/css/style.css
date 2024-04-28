@@ -249,7 +249,7 @@ section:nth-child(3), section:last-child{
     margin: 25px;
 }
 .logo-2 img{
-    color: white;
+    filter: brightness(0) invert(1) grayscale(1);
     margin-left: 20px;
     width: 175px;
 }
