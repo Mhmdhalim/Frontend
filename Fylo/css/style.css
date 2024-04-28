@@ -65,7 +65,7 @@ h1, a{
         max-width: 374px; width: 100%; height: 100%;
     }
     .features img{
-        width: 200px;   
+        width: 170px;   
     }
 }
 
@@ -149,7 +149,7 @@ section:nth-child(3), section:last-child{
 /* Header */
 
 .logo img{
-    width: 100px;
+    width: 80px;
 }
 
 /* Features */
