@@ -12,8 +12,16 @@
     margin: 0;
     scroll-behavior: smooth;
     font-size: 16px;
+    font-family: var(--secoundry-font);
+    font-size: 700;
 }
 
+ul, li a{
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: .01rm;
+    font-weight: 400;
+}
 :root{
 
    /* Headings, Call-to-actions, Header Navigation */
@@ -40,4 +48,134 @@
 
     --Light-Grayish-Blue: hsl(240, 75%, 98%);
     --Light-Gray: hsl(0, 0%, 75%);
+}
+
+h1, a{
+    font-family: var(--main-font);
+    font-size: 400;
+}
+/* Media */
+
+@media (max-width: 375px){
+    .con{
+        max-width: 374px; width: 100%; height: 100%;
+    }
+    .features img{
+        width: 200px;   
+    }
+}
+
+@media (max-width: 600px){
+    .con{
+        max-width: 599px; width: 100%; height: 100%;
+    }
+
+}
+
+@media (max-width: 770px){
+    section{
+        text-align: center;
+    }
+    section form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (max-width: 800px){
+    .con{
+        max-width: 799px; width: 100%; height: 100%;
+    }
+
+}
+@media (max-width: 1440px){
+    .con{
+        max-width: 1439px; width: 100%; height: 100%;
+    }
+
+@media (min-width: 1441px){
+    .con{
+        max-width: 1439px; width: 100%; height: 100%;
+    }
+
+}
+}
+.con{
+    background-color: var(--Light-Grayish-Blue);
+}
+
+/* global */
+img{
+    max-width: 700px;
+    width: 100%;
+}
+.info{
+    max-width: 600px;
+    width: 100%;
+}
+/* end of global */
+
+/* Header */
+
+.logo img{
+    width: 70px;
+}
+
+/* Features */
+.features{
+    color: var(--Very-Dark-Blue);
+    width: 100%;
+}
+
+.features input:first-child{
+    width: 22em;
+    padding: 5px;
+    height: 3em;
+    font-size: .7em;
+    text-align: left;
+}
+.features input:nth-child(2){
+    width: 11em;
+    height: 3em;
+    font-size: .7em;
+}
+
+/* Team */
+.team{
+    color: var(--Very-Dark-Blue);
+    width: 100%;
+}
+.team img{
+    max-width: 700px;
+    width: 100%;
+}
+.team-info{
+    max-width: 600px;
+    width: 100%;
+}
+.team .c-2{
+    color: var(--esaturated-Blue);
+}
+
+.arrow img{
+    width: 20px;
+}
+.arrow p{
+    line-height: 10;
+    color: var(--Moderate-Cyan);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 5px;
+    margin-top: -60px;
+}
+.qoute{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    bo
+}
+.qoute img{
+    width: 20px;
 }

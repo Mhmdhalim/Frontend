@@ -20,17 +20,91 @@
   </style>
 </head>
 <body>
-    <div class="container-fluid p-0 w-0 bg-primary vh-100">
-      <header class="d-flex justify-content-between bg-warning" style="height: 100px;">
-        <div>sdv</div>
-        <div>svddv</div>
+    <div class="con container-fluid p-3 p-sm-4 p-md-4 p-lg-5 ">
+      <header class="d-flex justify-content-between" style="height: 5em;">
+        <div>
+          <a href="#" class="logo">
+            <img src="./images/logo.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <ul class="d-flex justify-content-between">
+            <li><a class="fs-6 text-black ms-0 me-1" href="#features">Features</li>
+            <li><a class="fs-6 text-black ms-2 me-2" href="#team">Team</a></li>
+            <li><a class="fs-6 text-black ms-2 me-3" href="#sign-in">Sign In</a></li>
+          </ul>
+        </div>
       </header>
-      <main class="bg-danger" style="height: 300px;">
-        <section>vx</section>
-        <section>svd</section>
-        <section>svds</section>
+      <main class="d-grid" style="gap: 200px;">
+        <!-- Features -->
+        <section id="features" class="features d-flex justify-content-between align-items-center felx-wrap flex-column flex-md-row">
+          <!-- features info -->
+          <div class="info">
+            <h1 class="fs-1 fw-bolder">All your files in one secure location, accessible anywhere.</h1>
+            <p class="fs-6 fw-bold lh-sm">
+              Fylo stores your most important files in one secure location. 
+              Access them wherever you need, share and collaborate with friends, 
+              family, and co-workers.
+            </p>
+            <form class="row g-2">
+              <div class="col-auto">
+                <input class="form-control" type="email" name="femail" placeholder="Enter your email...">
+              </div>
+              <div class="col-auto">
+                <input class="btn btn-primary mb-3" type="submit" value="Get Started" style="width: 11em; text-align: center;">
+              </div>
+            </form>
+          </div>
+          <!-- features img -->
+          <div class="features-img">
+            <figure >
+              <img src="./images/illustration-1.svg" alt="icon-email">
+            </figure>
+          </div>
+        </section>
+        <!-- END OF FEATURES -->
+
+
+        <!-- Team -->
+        <section id="team" class="team d-flex justify-content-between align-items-center felx-wrap flex-column flex-md-row">
+          <!-- team info -->
+          <div class="info">
+            <h1 class="fs-1 fw-bolder">Stay productive, wherever you are</h1>
+            <p class="c-2 fs-6 fw-bold lh-sm">
+              Never let location be an issue when accessing your files. Fylo has you 
+              covered for all of your file storage needs.
+            </p>
+            <p class="c-2 fs-6 fw-bold lh-sm">
+              Securely share files and folders with friends, family and colleagues for 
+              live collaboration. No email attachments required!
+            </p>
+            <div class="arrow">
+              <p>See how Fylo works <img src="./images/icon-arrow.svg" alt="" ></p>
+            </div>
+            <div class="qoute">
+              <img src="./images/icon-quotes.svg" alt="">
+              <p class="fs-6 fw-bold lh-sm">
+                Fylo has improved our team productivity by an order of magnitude. Since 
+                making the switch our team has become a well-oiled collaboration machine.
+              </p>
+              <div class="Burton">
+                <img src="./images/avatar-testimonial.jpg" alt="">
+                <h1>Kyle Burton</h1>
+                <p>Founder & CEO, Huddle</p>
+              </div>
+            </div>
+          </div>
+          <!-- team img -->
+          <div class="team-img">
+            <figure >
+              <img src="./images/illustration-2.svg" alt="icon-email">
+            </figure>
+          </div>
+        </section>
+        <!-- Sign In -->
+        <section id="sign-in">svds</section>
       </main>
-      <footer class="bg-warning" style="height:400px">
+      <footer class="" style="height:400px">
         vds
       </footer>
     </div>
