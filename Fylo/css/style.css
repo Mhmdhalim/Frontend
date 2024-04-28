@@ -275,7 +275,7 @@ section:nth-child(3), section:last-child{
     border: white 1px solid;
     padding: 10px;
 }
-.footer img{
+.footer .phone, .footer .email{
     width: 15px;
 }
 .footer a{
