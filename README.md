@@ -7,5 +7,6 @@ I create some of projects.
      I made this project by bootsratp.
   
 ### JUNIOR
+1. [Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
 1. [Testimonials](https://mhmdhalim.github.io/Frontend/testimonials-grid-section-main/)
 2. [Clipboard-landing](https://mhmdhalim.github.io/Frontend/clipboard-landing-page-master/)
