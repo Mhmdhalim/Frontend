@@ -8,5 +8,4 @@ I create some of projects.
   
 ### JUNIOR
 1. [Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
-1. [Testimonials](https://mhmdhalim.github.io/Frontend/testimonials-grid-section-main/)
-2. [Clipboard-landing](https://mhmdhalim.github.io/Frontend/clipboard-landing-page-master/)
+2. [Clipboard-landing "@meida desktop 1440px"](https://mhmdhalim.github.io/Frontend/clipboard-landing-page-master/)
