@@ -43,6 +43,6 @@ span{
     transition: .5s;
     font-size: 0;
 }
-.container.container.active i{
+.container.container.active span i{
     font-size: 1.35em;
 }
