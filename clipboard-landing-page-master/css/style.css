@@ -423,10 +423,6 @@ img{
 
 /* @media (max-width: 768px){ */
 @media (max-width: 1200px){
-    
-    body{
-        overflow: auto;
-    }
 
 }
 @media (min-width: 1600px){
@@ -446,6 +442,9 @@ img{
 @media (max-width: 600px){
     
     /* HEADER */
+    main{
+        width: 500px;
+    }
     img{
         width: 200px;
     }

@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    color: antiquewhite;
+}
+.container{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: rgb(25, 28, 30);
+    transition: .5s;
+}
+
+.active{
+    width: 200px;
+    height: 200px;
+}
+span{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition: transform .5s, width .5s, height .5s, background 1s;
+    transition-delay: calc(.1s * var(--i));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container.active span{
+    width: 45px;
+    height: 45px;
+    background-color: rgb(8, 23, 32);
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
+
+.container span i{
+    transition: .5s;
+    font-size: 0;
+}
+.container.container.active i{
+    font-size: 1.35em;
+}
