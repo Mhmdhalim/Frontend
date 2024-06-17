@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="container-fluid m-0 p-0 vh-100 d-flex justify-content-center align-items-center">
+
+  <!-- Rating state start -->
+  <div class="container shadow p-3 mb-5 rounded">
+    <!-- FIRST SECTION -->
+    <div class="first-front">
+      <div class="star">
+        <img src="./images/icon-star.svg" class="rounded-circle fs-5" alt="star">
+      </div>
+      <h1 class="text-white">How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <div id="circles" class="circles d-flex justify-content-center align-items-center ">
+        <span id="1" class="rounded-circle align-items-center justify-content-center d-flex">1</span>
+        <span id="2" class="rounded-circle align-items-center justify-content-center d-flex">2</span>
+        <span id="3" class="rounded-circle align-items-center justify-content-center d-flex">3</span>
+        <span id="4" class="rounded-circle align-items-center justify-content-center d-flex">4</span>
+        <span id="5" class="rounded-circle align-items-center justify-content-center d-flex">5</span>
+      </div>
+      <div class="d-grid m-3 p-3 justify-content-center">
+        <button type="submit" class="btn rounded-pill lh-1 text-uppercase text-center">Submit</button>
+      </div>
+    </div>
+
+    <!-- SECOUND SECTION -->
+    <div class="secound-front active">
+      <div class="d-flex justify-content-center align-items-center flex-column">
+        <div class="phone text-center m-2 p-2 ">
+          <img src="./images/illustration-thank-you.svg" alt="">
+        </div>
+        <p class="orange-p text-center m-2 p-0 rounded-pill">
+          You selected <large id="span-rate" class="fs-5 fs-sm-7"> </large> out of 5
+        </p>
+        <h1 class="text-white text-center">Thank you!</h1>
+        <p class="text-center">
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+  </div>
+  
+    <script src="sc.js" defer></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Overpass", sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    
+    /* Primary */
+
+    --Orange: hsl(25, 97%, 53%);    
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+}
+
+body{
+    background-color: var(--Very-Dark-Blue);
+}
+
+.container{
+    background-image: linear-gradient(var(--Dark-Blue), var(--Very-Dark-Blue));
+    width: 380px;
+    height: 380px;
+    
+}
+
+.star img{
+    background-color: var(--Dark-Blue);
+    padding: 10px;
+}
+
+p{
+    font-weight: 400;
+    font-size: 15px;
+    width: 93%;
+    color: var(--Light-Grey);
+}
+
+span{
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Grey);
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin: 9px;
+}
+
+span:hover{
+    background-color: var(--Orange);
+    color: var(--Dark-Blue);
+}
+.btn{
+    background-color: var(--Orange);
+    font-weight: 800;
+    font-size: 13px;
+    word-spacing: 15px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    margin-top: -5px;
+    padding: 12px;
+    width: 320px;
+}
+
+.btn:hover{
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+}
+/* JS style */
+
+.click-color{
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+}
+
+.active{
+    display: none;
+}
+
+.non-active{
+    display: block;
+}
+
+.orange-p{
+    color: var(--Orange);
+    background-color: var(--Dark-Blue);
+    width: 200px;
+}
+
+@media (max-width: 400px){
+    .container{
+        width: 100%;
+        width: 340px;
+        height: 340px;
+    }
+    .btn{
+        width: 280px;
+    }
+    span{
+    padding: 7px;
+    width: 35px;
+    height: 35px;
+    margin: -5px 10px;
+    }
+    .secound-front p{
+        margin-top: -10px;
+        font-size: 12px;
+    }
+    .secound-front h1{
+        font-size: 30px;
+    }
+
+}
