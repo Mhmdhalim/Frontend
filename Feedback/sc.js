@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         spans.forEach(span => {
             if (span.classList.contains(classname))
             {
-            counter++;
+                counter++;
             }
         });
         return counter;
