@@ -55,6 +55,8 @@ span{
     height: 45px;
     display: inline-block;
     margin: 9px;
+    transition: .2s all linear;
+    cursor: pointer;
 }
 
 span:hover{

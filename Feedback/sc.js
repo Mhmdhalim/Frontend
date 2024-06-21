@@ -2,28 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // ADD CLASS TO MAKE BACKGROUND-WHITE 
     let spans = document.querySelectorAll('span');
     spans.forEach(span => {
-        span.onclick = () => {
-            span.classList.toggle('click-color');
-            };
-    });
+        span.addEventListener('click', () => {
+            spans.forEach(s => s.classList.remove('click-color'));
 
-    // COUNT NUMBERS OF SPAN CONTAINS THE CLASS
-    function count(classname) {
-        let counter = 0;
-        spans.forEach(span => {
-            if (span.classList.contains(classname))
-            {
-                counter++;
-            }
-        });
-        return counter;
-    }
+            span.classList.add('click-color');
+        })
+
+    });
 
     // HAVE A COUNT
     let finallycount = 0;
     let submit = document.querySelector('button');
     submit.onclick = () => {
-        finallycount = count('click-color');
+        // Bring rate
+        spans.forEach(span => {
+        if (span.classList.contains('click-color'))
+        {
+            finallycount = span.innerText;
+        }
+        });
 
         // ADD RATE
         let rate = document.createElement('small');
