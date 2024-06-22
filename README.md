@@ -1,5 +1,6 @@
 # Frontend
-I create some of projects.
+I create some of projects from zero.\
+These problems/challanges are found on FrontEnd Mentor.
 
 ## DEMOES
 ### EASY (NEWBIE)
