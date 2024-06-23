@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else
         {
-            alert(Error("Invalid, Should you Choose"));
-        }
+          Swal.fire({
+            title: "Invalid",
+            text: "Should you rate",
+            icon: "success"
+            });
         }
 });
