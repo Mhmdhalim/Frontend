@@ -11,7 +11,7 @@ These problems/challanges are found on FrontEnd Mentor.
 1. [Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
 
 ### INTERMEDIATE
-1. [Chat](https://mhmdhalim.github.io/Frontend/Chat-App/)\
+1. [Chat](https://mhmdhalim.github.io/Frontend/Chat-App/)
    
 # JS
 1. [Magic-Icon](https://mhmdhalim.github.io/Frontend/Magic-Icon/)
