@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     submit.onclick = () => {
         // Bring rate
         spans.forEach(span => {
-        if (span.classList.contains('click-color'))
-        {
-            finallycount = span.innerText;
-        }
+            if (span.classList.contains('click-color')) {
+                finallycount = span.innerText;
+            }
         });
 
         // ADD RATE
@@ -35,17 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let first = document.getElementsByClassName('first-front')[0];
         let secound = document.getElementsByClassName('secound-front')[0];
 
-        if (finallycount > 0)
-        {
+        if (finallycount > 0) {
             first.className += ' active';
             secound.className = 'secound-front non-active';
         }
-        else
-        {
-          Swal.fire({
-            title: "Invalid",
-            text: "Should you rate",
-            icon: "success"
-            });
+        else {
+            alert('Invalid: Should you rate')
         }
+    }
 });
