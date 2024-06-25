@@ -330,7 +330,7 @@ h1{
     }
     
 }
-@media (max-width:1200px){
+@media (min-width:1200px){
     main::after{
         display: none;
     }
@@ -339,55 +339,56 @@ h1{
         overflow-y: scroll;
         padding: 50px;
     }
-}
-
-
-/* Animation */
-
-.first-sec{
-    position: absolute;
-    animation-name: drop;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop {
-    0%{
-        top: -800px;
-        left: 300px;
-    }
-    50%{
-        top: 60px;
-        left: 300px;
-    }
-    100%{
-        top: 25px;
-        left: 300px;
-    }
     
+    /* Animation */
+
+    .first-sec{
+        position: absolute;
+        animation-name: drop;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes drop {
+        0%{
+            top: -800px;
+            left: 300px;
+        }
+        50%{
+            top: 60px;
+            left: 300px;
+        }
+        100%{
+            top: 25px;
+            left: 300px;
+        }
+        
+    }
+
+    .secound-sec{
+        position: absolute;
+        animation-name: drop2;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes drop2 {
+        0%{
+            top: 1000px;
+            right: 200px;
+        }
+        50%{
+            top: 25px;
+            right: 200px;
+        }
+        100%{
+            top: 60px;
+            right: 200px;
+        }
+        
+    }
+
 }
 
-.secound-sec{
-    position: absolute;
-    animation-name: drop2;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes drop2 {
-    0%{
-        top: 1000px;
-        right: 200px;
-    }
-    50%{
-        top: 25px;
-        right: 200px;
-    }
-    100%{
-        top: 60px;
-        right: 200px;
-    }
-    
-}
