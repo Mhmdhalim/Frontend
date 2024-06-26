@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     -webkit-box-sizing: border-box;
@@ -8,34 +7,85 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    font-size: 10px;
-    font-family: "Rubik", sans-serif;;
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
 }
 
 :root{
 
+/* Primary */
 
-/* Text */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
 
-    --Pale-Violet : hsl(276, 100%, 81%);
-    --Moderate-Violet: hsl(276, 55%, 52%);
-    --Desaturated-Dark-Violet : hsl(271, 15%, 43%);
-    --Grayish-Blue: hsl(206, 6%, 79%);
-    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
-    --Dark-Grayish-Violet : hsl(270, 7%, 64%);
-
-    /* Gradients */
-
-    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
-
-    --Light-Magenta: hsl(293, 100%, 63%);
-    --Light-Violet: hsl(264, 100%, 61%);
-
-    /* Secondary */
+/* Neutral */
 
     --White: hsl(0, 0%, 100%);
-    --Light-Grayish-Violet : hsl(270, 20%, 96%);
-    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
-    --Very-Light-Magenta : hsl(289, 100%, 72%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
 
+}
+
+body{
+    background-color: var(--Off-white);
+}
+.container{
+    background-color: var(--White);
+    width: 700px;
+    height: 550px;
+    border-radius: 0 0 220px 0;
+}
+
+form{
+    width: 65%;
+}
+label{
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+}
+input, .year_{
+    width: calc(340px / 3);
+    border: 1px solid var(--Light-grey);
+    padding: 8px;
+    padding-left: 12px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+hr{
+    width: 85%;
+}
+
+.image{
+    position: relative;
+}
+img{
+    width: 80px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -74px;
+    right: 80px;
+    cursor: pointer;
+}
+.content div{
+    font-size: 75px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+.content span{
+    display: inline-block;
+    background-color: var(--Purple);
+    width: 38px;
+    height: 12px;
+    transform: rotate(1.5deg);
+}
+.content div span:last-of-type{
+    margin-right: 10px;
 }
