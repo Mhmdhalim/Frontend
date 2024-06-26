@@ -48,7 +48,7 @@ label{
     color: var(--Smokey-grey);
     text-transform: uppercase;
 }
-input, .year_{
+input{
     width: calc(340px / 3);
     border: 1px solid var(--Light-grey);
     padding: 8px;
@@ -56,10 +56,13 @@ input, .year_{
     font-size: 26px;
     font-weight: 600;
     letter-spacing: 1.2px;
+    border-radius: 8px;
 }
 
 hr{
-    width: 85%;
+    width: 80%;
+    color: var(--Smokey-grey);
+    margin-left: 20px;
 }
 
 .image{
@@ -74,7 +77,7 @@ img{
     cursor: pointer;
 }
 .content div{
-    font-size: 75px;
+    font-size: 72px;
     padding-left: 20px;
     font-weight: 600;
     font-style: italic;
@@ -86,6 +89,19 @@ img{
     height: 12px;
     transform: rotate(1.5deg);
 }
-.content div span:last-of-type{
-    margin-right: 10px;
+.content .s{
+    margin-left: -20px;
+    color: var(--Purple);
+}
+
+.error-state{
+    font-size: 9px;
+    margin: 4px;
+    font-style: italic;
+    color: var(--Light-red);
+    display: none;
+}
+.active{
+    border-color: var(--Light-red);
+    color: var(--Light-red);
 }
