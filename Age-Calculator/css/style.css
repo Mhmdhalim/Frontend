@@ -60,7 +60,7 @@ input{
 }
 
 hr{
-    width: 80%;
+    width: 70%;
     color: var(--Smokey-grey);
     margin-left: 20px;
 }
@@ -73,13 +73,13 @@ img{
     transform: rotate(90deg);
     position: absolute;
     top: -74px;
-    right: 80px;
+    right: 110px;
     cursor: pointer;
 }
 .content div{
     font-size: 72px;
     padding-left: 20px;
-    font-weight: 600;
+    font-weight: 800;
     font-style: italic;
 }
 .content span{
@@ -104,4 +104,29 @@ img{
 .active{
     border-color: var(--Light-red);
     color: var(--Light-red);
+}
+
+@media (max-width: 400px) {
+    .container{
+        width: 370px;
+        height: 550px;
+    }
+    input{
+        width: calc(260px /3);
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    hr{
+        width: 90%;
+    }
+    img{
+        width: 70px;
+        top: -72px;
+        right: 120px;
+    }
+    .content div{
+        font-size: 49px;
+        line-height: 90px;
+    }
+
 }
