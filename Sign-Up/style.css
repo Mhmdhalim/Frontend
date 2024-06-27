@@ -143,12 +143,11 @@ button{
     .front_1{
         display: block;
         width: 350px;
-        height: 900px;
+        height: 600px;
         border-radius: 16px;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;
-        height: 80%;
         position: relative;
         overflow: hidden;
     }
@@ -161,9 +160,9 @@ button{
     }
     .mobil-image{
         display: block;
-        width: 150%;
-        margin-left: -50px;
-        margin-bottom: -40px;
+        width: 140%;
+        margin-left: -40px;
+        margin-bottom: -30px;
 
     }
     .front_1 h1{
