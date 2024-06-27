@@ -5,20 +5,15 @@ These problems/challanges are found on FrontEnd Mentor.
 # DEMOES
 ## HTML, CSS
 
-### EASY (NEWBIE)
-[Social-links-patch](https://mhmdhalim.github.io/Frontend/social-links-patch/)\
+1. [Social-links-patch](https://mhmdhalim.github.io/Frontend/social-links-patch/)\
      I made this project by bootsratp.
   
-### JUNIOR
-[Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
+2. [Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
 
-### INTERMEDIATE
-[Chat](https://mhmdhalim.github.io/Frontend/Chat-App/)
+3. [Chat](https://mhmdhalim.github.io/Frontend/Chat-App/)
    
 ## JS
-[Magic-Icon](https://mhmdhalim.github.io/Frontend/Magic-Icon/)
-### EASY (NEWBIE)
-[Feedback](https://mhmdhalim.github.io/Frontend/Feedback/)
-### JUNIOR
-1. [Age Calculator](https://mhmdhalim.github.io/Frontend/Age-Calculator/)
-2. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
+1. [Magic-Icon](https://mhmdhalim.github.io/Frontend/Magic-Icon/)
+2. [Feedback](https://mhmdhalim.github.io/Frontend/Feedback/)
+3. [Age Calculator](https://mhmdhalim.github.io/Frontend/Age-Calculator/)
+4. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
