@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    font-family: "Overpass", sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+:root{
+    
+/* Primary */
+
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+
+/* Neutral */
+
+/* Light Theme */
+
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+/* Dark Theme */
+
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    /* hover */
+    --Light-Grayish-Blue : hsl(236, 33%, 92%); 
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+    /* main margin and padding */
+    --main-margin : 10px;
+    --main-padding: 10px;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* dark theme */
+body{
+    background: var(--Very-Dark-Blue) url(./images/bg-desktop-dark.jpg) no-repeat top;
+    background-size: 100% 33%;
+}
+.container{
+    height: 85vh;
+}
+header{
+    height: 50px;
+    color: var(--Light-Grayish-Blue); 
+    letter-spacing: 10px;
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+    padding-bottom: 0px;
+}
+.sun{
+    cursor: pointer;
+}
+.content{
+    height: fit-content;
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+}
+
+.input_todo{
+    width: 100%;
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+input{
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--Light-Grayish-Blue);
+}
+::placeholder{
+    font-size: 15px;
+    color: var(--Dark-Grayish-Blue);
+}
+/* list */
+.content .list_task{
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    height: 65%;
+}
+ul{
+    padding-top: 5px;
+    margin-left: -34px;
+    color: hsl(233, 32%, 78%);;
+}
+.content .list_task ul li, .input_todo{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+span{
+    border-radius: 50%;
+    border: var(--Dark-Grayish-Blue) 1px solid;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+}
+.color_complete{
+    background: rgb(39, 39, 152);
+}
+.txt_complete{
+    text-decoration: line-through;
+    opacity: 50%;
+}
+p{
+    width: 100%;
+    background-color: var(--Dark-Grayish-Blue);
+    opacity: 50%;
+    height: 1px;
+    margin: 10px 0;
+}
+li:last-child, p:last-child{
+    margin-bottom: 0;
+}
+
+/*  */
+.left span{
+    border: none;
+    background-color: transparent;
+    margin: 0;
+}
+.content .action_of_list_desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px 5px 15px;
+    color: var(--Dark-Grayish-Blue);
+}
+.content .action_of_list_desktop div{
+    font-size: 17px;
+}
+.content .action_of_list_desktop .center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.content .action_of_list_desktop .right:hover, .center div:hover{
+    color: var(--Bright-Blue);
+}
+footer{
+    color: var(--Dark-Grayish-Blue);
+    margin: 20px;
+    height: 50px;
+}
+
+@media (min-width:1200px) {
+    .container{
+        width: 600px;
+    }
+}
+/* light theme */
