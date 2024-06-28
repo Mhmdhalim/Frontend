@@ -57,6 +57,7 @@ input{
     font-weight: 600;
     letter-spacing: 1.2px;
     border-radius: 8px;
+    outline-color: #d0cece;
 }
 
 hr{

@@ -121,6 +121,9 @@ button{
     display: none;
 }
 
+input{
+    outline-color: #d0cece ;
+}
 /* front 2 */
 
 .front-2{
