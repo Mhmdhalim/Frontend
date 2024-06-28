@@ -51,6 +51,7 @@ ul li{
 body{
     background: var(--Very-Dark-Blue) url(./images/bg-desktop-dark.jpg) no-repeat top;
     background-size: 100% 33%;
+
 }
 .container{
     height: 85vh;
@@ -89,9 +90,15 @@ input{
     outline: none;
     color: var(--Light-Grayish-Blue);
 }
+input.light{
+    color: (var(--Very-Dark-Grayish-Blue));
+}
 ::placeholder{
     font-size: 15px;
     color: var(--Dark-Grayish-Blue);
+}
+::placeholder.light{
+    color: (var(--Very-Dark-Grayish-Blue));
 }
 /* list */
 .content .list_task{
@@ -171,6 +178,9 @@ footer{
     margin: 20px;
     height: 50px;
 }
+.action_of_list_mobile{
+        display: none;
+    }
 
 @media (min-width:900px) {
     .container{
@@ -182,6 +192,9 @@ footer{
 }
 @media (min-width: 541px){
     .action_of_list_mobile *{
+        display: none;
+    }
+    .action_of_list_mobile{
         display: none;
     }
 }
@@ -199,10 +212,28 @@ footer{
         margin-top: 30px;
         background-color: var(--Very-Dark-Desaturated-Blue);
         color: var(--Dark-Grayish-Blue);
+        padding: 10px;
     }
     #all:hover, #active:hover, #completed:hover{
         color: var(--Bright-Blue);
     }
+    .action_of_list_mobile.light{
+        background-color: var(--Very-Light-Grayish-Blue);
+        opacity: 50%;
+    }
 
 }
+
 /* light theme */
+
+body.light{
+    background: var(--Very-Light-Gray) url(./images/bg-desktop-light.jpg) no-repeat top;
+    background-size: 100% 33%;
+}
+
+input.light, .input_todo.light, .content .list_task.light, ul.light{
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.content.light{
+    background-color: var(--Very-light-Grayish-Blue);
+}

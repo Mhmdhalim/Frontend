@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         light_theme.forEach((ele) => {
             ele.classList.toggle('light');
         });
+        saveData();
     };
 
 
