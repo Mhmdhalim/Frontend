@@ -9,45 +9,76 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // button
-    let btns = document.querySelectorAll('.span_li');
-    let li = Array.from(document.querySelectorAll('.li'));
 
-    btns.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('color_complete');
-            li[index-1].classList.toggle('txt_complete');
-        })
-    })
-    
-    // Make A Task
+    // list
     let ul = document.querySelector('ul');
+
+    // COUNTER
+
+    // ADD NEW TASK
     let input_btn = document.querySelector('.span_input');
-
+    const input = document.querySelector('.taskes'); 
     input_btn.onclick = () => {
-        let input = document.querySelector('.taskes').value;
-        console.log(input);
-        let new_li = document.createElement('li');
-        new_li.classList.add('li');
+        
+        if (input.value === '')
+        {
+            alert('You must write somthing');
+        }
+        else
+        {
+            let new_li = document.createElement('li');
+            new_li.classList.add('li');
 
-        let new_span = document.createElement('span');
-        new_span.classList.add('span_li')
+            let new_span = document.createElement('span');
+            new_span.classList.add('span_li')
+            new_span.classList.add('li')
 
-        new_li.appendChild(new_span);
-        new_li.innerHTML += input;
+            new_li.appendChild(new_span);
+            new_li.innerHTML += input.value;
 
 
-        ul.appendChild(new_li);
+            ul.appendChild(new_li);
+        }
+        input.value = "";
+        saveData();
     }
 
-    // clear completed
+    
+    // COMPLETED
+    ul.addEventListener('click', function (e) {
+        if (e.target.tagName == "LI") {
+            e.target.classList.toggle('txt_complete');
+            saveData();
+        }
+        else if (e.target.tagName == 'SPAN'){
+            e.target.parentElement.classList.toggle('txt_complete');
+            saveData();
+        }
+    });
+    
+    // CLAER TASK
     let clear = document.querySelector('.right');
-    console.log(clear)
     clear.addEventListener('click', () => {
+        let li = document.querySelectorAll('li');
+
         li.forEach((ele) => {
             if (ele.classList.contains('txt_complete')) {
                 ele.style.display = 'none';
             }
         });
+        saveData();
     });
+    //  COUNTER
+    
+
+    // SAVING DATA
+
+    function saveData() {
+        localStorage.setItem("data", ul.innerHTML);
+    }
+
+    function show() {
+        ul.innerHTML = localStorage.getItem("data");
+    }
+    show();
 });

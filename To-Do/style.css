@@ -121,12 +121,13 @@ span{
     cursor: pointer;
 
 }
-.color_complete{
-    background: rgb(39, 39, 152);
-}
+
 .txt_complete{
     text-decoration: line-through;
     opacity: 50%;
+    > span {
+        background: rgb(39, 39, 152);
+    }
 }
 p{
     width: 100%;
@@ -171,9 +172,37 @@ footer{
     height: 50px;
 }
 
-@media (min-width:1200px) {
+@media (min-width:900px) {
     .container{
         width: 600px;
     }
+    .action_of_list_mobile *{
+        display: none;
+    }
+}
+@media (min-width: 541px){
+    .action_of_list_mobile *{
+        display: none;
+    }
+}
+
+@media (max-width: 540px) {
+    body{
+        background: var(--Very-Dark-Blue) url(./images/bg-mobile-dark.jpg) no-repeat top;
+        background-size: 100% 33%;
+    }
+    .center *{
+        display: none;
+    }
+    .action_of_list_mobile{
+        display: block;
+        margin-top: 30px;
+        background-color: var(--Very-Dark-Desaturated-Blue);
+        color: var(--Dark-Grayish-Blue);
+    }
+    #all:hover, #active:hover, #completed:hover{
+        color: var(--Bright-Blue);
+    }
+
 }
 /* light theme */
