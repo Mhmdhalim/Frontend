@@ -90,26 +90,25 @@ input{
     outline: none;
     color: var(--Light-Grayish-Blue);
 }
-input.light{
-    color: (var(--Very-Dark-Grayish-Blue));
-}
+
 ::placeholder{
     font-size: 15px;
     color: var(--Dark-Grayish-Blue);
 }
-::placeholder.light{
-    color: (var(--Very-Dark-Grayish-Blue));
-}
+
 /* list */
 .content .list_task{
     background-color: var(--Very-Dark-Desaturated-Blue);
     height: 65%;
+    overflow: hidden;
 }
 ul{
     padding-top: 5px;
     margin-left: -34px;
-    color: hsl(233, 32%, 78%);;
+    color: hsl(233, 32%, 78%);
+    overflow: hidden;
 }
+
 .content .list_task ul li, .input_todo{
     width: 100%;
     height: 45px;
@@ -121,12 +120,11 @@ ul{
 }
 span{
     border-radius: 50%;
-    border: var(--Dark-Grayish-Blue) 1px solid;
+    border: hsl(234deg 77.72% 76.8%) 1px solid;
     margin-right: 15px;
     width: 20px;
     height: 20px;
     cursor: pointer;
-
 }
 
 .txt_complete{
@@ -143,6 +141,7 @@ p{
     height: 1px;
     margin: 10px 0;
 }
+
 li:last-child, p:last-child{
     margin-bottom: 0;
 }
@@ -219,7 +218,6 @@ footer{
     }
     .action_of_list_mobile.light{
         background-color: var(--Very-Light-Grayish-Blue);
-        opacity: 50%;
     }
 
 }
@@ -236,4 +234,20 @@ input.light, .input_todo.light, .content .list_task.light, ul.light{
 }
 .content.light{
     background-color: var(--Very-light-Grayish-Blue);
+}
+ul.light{
+    color: (var(--Very-Dark-Grayish-Blue));
+    
+}
+/* li.txt_complete.light span.light{
+    background-color: rgb(245, 235, 223);
+}
+span.light{
+    border: var(--Very-Light-Grayish-Blue) 1px solid;
+} */
+input.light{
+    color: (var(--Very-Dark-Grayish-Blue));
+}
+::placeholder.light{
+    color: (var(--Very-Dark-Grayish-Blue));
 }
