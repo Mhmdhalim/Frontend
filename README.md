@@ -23,4 +23,4 @@ These problems/challanges are found on FrontEnd Mentor.
 2. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
 ### INTERMEDIATE
 1. [To-Do](https://mhmdhalim.github.io/Frontend/To-Do/)
-   I finished it by 80%.
+   I finished it by 70%.
