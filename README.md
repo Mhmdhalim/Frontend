@@ -22,5 +22,6 @@ These problems/challanges are found on FrontEnd Mentor.
 1. [Age Calculator](https://mhmdhalim.github.io/Frontend/Age-Calculator/)
 2. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
 ### INTERMEDIATE
-1. [To-Do](https://mhmdhalim.github.io/Frontend/To-Do/)
-   I finished it by 70%.
+1. [To-Do](https://mhmdhalim.github.io/Frontend/To-Do/)\
+   I finished it by 70%./
+   I Think, I Should be Learn SASS and a FRAMEWORK.
