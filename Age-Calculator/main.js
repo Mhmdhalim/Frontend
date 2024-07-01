@@ -69,12 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (new_month < 0 || (new_month === 0 && new_day < 0)) {
                         new_month = (12 + new_month) % 12;
                     }
-                // Calculate days
-                if (new_day < 0) {
-                    var prevMonthDays = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-                    new_day = prevMonthDays - birth.getDate() + today.getDate();
-                }
-
                 let txt_year = document.querySelector('.s_year');
                 let txt_month = document.querySelector('.s_month');
                 let txt_day = document.querySelector('.s_day');
