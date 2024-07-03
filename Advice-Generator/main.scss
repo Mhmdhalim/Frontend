@@ -29,15 +29,18 @@ $Dark-Blue: hsl(218, 23%, 16%);
 .main{
     background-color: $Dark-Grayish-Blue;
     position: relative;
+    border-radius: 17px;
     &__header {
         color: $Neon-Green;
         letter-spacing: 4px;
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: 900;
     }
     &__p{
         font-size: 28px;
         color: $Light-Cyan;
         text-align: center;
+        font-weight: 500;
         &__id{
             font-size: 10px;
         }
@@ -48,13 +51,13 @@ $Dark-Blue: hsl(218, 23%, 16%);
     &__icon{
         position: absolute;
         background-color: $Neon-Green;
-        bottom: -15px;
-        width: 35px;
-        height: 35px;
+        bottom: -20px;
+        width: 45px;
+        height: 45px;
         img{
             padding: 2px;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             background-color: $Neon-Green;
             cursor: pointer;
         }

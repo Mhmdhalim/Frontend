@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const myData = data;
 
             id.textContent = myData.slip.id;
-            paragraph.textContent = myData.slip.advice;
+            paragraph.textContent = `" ${myData.slip.advice} "`;
 
         } catch (error) {
             console.error('Error fetching data:', error);
