@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let id = document.querySelector('.main__p__id');
+    let id = document.querySelector('.main__header__id');
     let paragraph = document.querySelector('.main__p');
     let btn = document.querySelector('.icon')
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             id.textContent = myData.slip.id;
             paragraph.textContent = `“${myData.slip.advice}”`;
- 
+
         } catch (error) {
             console.error('Error fetching data:', error);
         }

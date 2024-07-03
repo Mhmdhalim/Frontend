@@ -34,16 +34,17 @@ $Dark-Blue: hsl(218, 23%, 16%);
         color: $Neon-Green;
         letter-spacing: 4px;
         font-size: 12px;
-        font-weight: 900;
+        font-weight: 800;
+        &__id{
+            font-size: 10px;
+        }
     }
     &__p{
         font-size: 28px;
         color: $Light-Cyan;
         text-align: center;
         font-weight: 500;
-        &__id{
-            font-size: 10px;
-        }
+        color: $Light-Cyan;
     }
     img{
         width: 95%;
