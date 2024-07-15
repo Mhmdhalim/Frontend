@@ -2,29 +2,19 @@
 I created some of projects from zero to end.\
 These problems/challanges are found on FrontEnd Mentor.
 
-# DEMOES
+## DEMOES
+
 ## HTML, CSS
 
-### EASY (NEWBIE)
-1. [Social-links-patch](https://mhmdhalim.github.io/Frontend/social-links-patch/)\
-     I made this project by bootsratp.
-### JUNIOR
 1. [Fylo](https://mhmdhalim.github.io/Frontend/Fylo/)
 
-### INTERMEDIATE
 1. [Chat](https://mhmdhalim.github.io/Frontend/Chat-App/)
    
 ## JS
 1. [Magic-Icon](https://mhmdhalim.github.io/Frontend/Magic-Icon/)
-### EASY (NEWBIE)
-1. [Feedback](https://mhmdhalim.github.io/Frontend/Feedback/)
-### JUNIOR
-1. [Age Calculator](https://mhmdhalim.github.io/Frontend/Age-Calculator/)
-2. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
-### INTERMEDIATE
-1. [To-Do](https://mhmdhalim.github.io/Frontend/To-Do/)\
-   I finished it by 70%.\
-   I Think, I Should be Learn SASS and a FRAMEWORK.
+2. [Feedback](https://mhmdhalim.github.io/Frontend/Feedback/)
+3. [Age Calculator](https://mhmdhalim.github.io/Frontend/Age-Calculator/)
+4. [Sign Up](https://mhmdhalim.github.io/Frontend/Sign-Up/)
 
 ## API
 1. [Advices](https://mhmdhalim.github.io/Frontend/Advice-Generator/)
