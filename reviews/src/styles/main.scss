@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$Moderate_blue: hsl(238, 40%, 52%);
+$Soft_Red: hsl(358, 79%, 66%);
+$Light_grayish_blue: hsl(239, 57%, 85%);
+$Pale_red: hsl(357, 100%, 86%);
+
+$Dark_blue: hsl(212, 24%, 26%);
+$Grayish_Blue: hsl(211, 10%, 45%);
+$Light_gray: hsl(223, 19%, 93%);
+$Very_light_gray: hsl(228, 33%, 97%);
+$White: hsl(0, 0%, 100%);
+
+$primary-color: #3490dc;
+
+* {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    background-color: $Very_light_gray;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 600px;
+}
+@media (max-width: 500px){
+    .container{
+        width: 400px;
+    }
+}
+
+// Global
+.box{
+    background-color: $White;
+    border: solid 1px transparent;
+    padding: 10px;
+    border-radius: 8px;
+    div, div div, p, span{
+        background-color: $White;
+    }
+    p{
+        color: $Grayish_Blue;
+    }
+    .reply, .score{
+        color: $Moderate_blue;
+        font-weight: 500;
+    }
+    .createAt{
+        color: $Grayish_Blue;
+        word-spacing: -1px;
+    }
+    .user{
+        color: $Dark_blue;
+        font-weight: 600;
+    }
+}
+
+
+#input{
+    background-color: $White;
+    border-radius: 6px;
+    border: solid 1px $Light_gray;
+    outline-color: $Moderate_blue;
+    padding: 12px;
+    margin: 0 8px ;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    color: $Dark_blue;
+    opacity: .9;
+    cursor: pointer;
+}
+::placeholder{
+    position: absolute;
+    top: 10px;
+    font-weight: 400;
+}

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: hsl(228, 33%, 97%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 600px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+.box {
+  background-color: hsl(0, 0%, 100%);
+  border: solid 1px transparent;
+  padding: 10px;
+  border-radius: 8px;
+}
+.box div, .box div div, .box p, .box span {
+  background-color: hsl(0, 0%, 100%);
+}
+.box p {
+  color: hsl(211, 10%, 45%);
+}
+.box .reply, .box .score {
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+}
+.box .createAt {
+  color: hsl(211, 10%, 45%);
+  word-spacing: -1px;
+}
+.box .user {
+  color: hsl(212, 24%, 26%);
+  font-weight: 600;
+}
+
+#input {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 6px;
+  border: solid 1px hsl(223, 19%, 93%);
+  outline-color: hsl(238, 40%, 52%);
+  padding: 12px;
+  margin: 0 8px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  color: hsl(212, 24%, 26%);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+::-moz-placeholder {
+  position: absolute;
+  top: 10px;
+  font-weight: 400;
+}
+
+::placeholder {
+  position: absolute;
+  top: 10px;
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */
