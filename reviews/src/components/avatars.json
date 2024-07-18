@@ -1,0 +1,7 @@
+[
+    { "id": 1, "img": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" },
+    { "id": 2, "img": "https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Blank&hatColor=Red&hairColor=Blonde&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=ShirtCrewNeck&clotheColor=Gray01&eyeType=Cry&eyebrowType=Default&mouthType=Serious&skinColor=Black" },
+    { "id": 3, "img": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription02&hairColor=Blonde&facialHairType=BeardMedium&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Gray01&eyeType=Cry&eyebrowType=RaisedExcitedNatural&mouthType=Eating&skinColor=Yellow" },
+    { "id": 4, "img": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Dizzy&eyebrowType=Angry&mouthType=Smile&skinColor=Light" },
+    { "id": 5, "img": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Platinum&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Blue02&eyeType=EyeRoll&eyebrowType=Default&mouthType=Grimace&skinColor=Pale" }
+]

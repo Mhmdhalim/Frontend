@@ -2,10 +2,12 @@ import React from "react";
 import "./styles/main.scss";
 
 import data from "./data.json";
+import avatars from "./components/avatars.json"
 import Current from "./components/current";
 import Comments from "./components/comments";
 
 function App() {
+  console.log(avatars[0].img)
   // CurrentUserDate
   let currentImg = data.currentUser.image.png;
   let currentUser = data.currentUser.username;
@@ -14,16 +16,21 @@ function App() {
   let CommentUser = [data.comments[0], data.comments[1]];
   let CommentUserName = ["amyrobson", "maxblagun"];
 
+  // function RandomImg() {
+  //   for (let i = 0; i < 5; i++) {
+  //     return avatars[Math.floor(Math.random() * 5) + 1].img;
+  //   }
+  // }
   function MakeComments() {
     return CommentUser.map((person, index) => {
 
       return (
         <Comments
-          person = {person}
+          person={person}
           id={person.id}
           score={person.score}
           createdAt={person.createdAt}
-          img={person.user.image.png}
+          // img={RandomImg()}
           user={CommentUserName[index]}
           content={person.content}
           // Empty or not, have som replies !?
