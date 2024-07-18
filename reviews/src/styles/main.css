@@ -30,15 +30,36 @@ body {
   padding: 10px;
   border-radius: 8px;
 }
-.box div, .box div div, .box p, .box span {
+.box div,
+.box div div,
+.box p {
   background-color: hsl(0, 0%, 100%);
 }
 .box p {
   color: hsl(211, 10%, 45%);
 }
-.box .reply, .box .score {
+.box .reply,
+.box .score {
   color: hsl(238, 40%, 52%);
   font-weight: 500;
+}
+.box .score {
+  background-color: hsl(223, 19%, 93%);
+}
+.box .score_ {
+  background-color: hsl(223, 19%, 93%);
+  width: 60px;
+  height: 65;
+  max-height: 80px;
+  margin-top: 10px;
+}
+.box .score_ span:last-child, .box .score_ span:first-child {
+  background-color: hsl(223, 19%, 93%);
+  color: hsl(238, 40%, 52%);
+  opacity: 0.5;
+}
+.box .score_ span:last-child:hover, .box .score_ span:first-child:hover {
+  opacity: 1;
 }
 .box .createAt {
   color: hsl(211, 10%, 45%);

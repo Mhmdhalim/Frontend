@@ -1,22 +1,20 @@
-import React from 'react';
-import './styles/main.scss';
+import React from "react";
+import "./styles/main.scss";
 
-import data from './data.json';
-import Current from './components/current';
-import Comments from './components/comments';
-import Reply from './components/reply';
+import data from "./data.json";
+import Current from "./components/current";
+import Comments from "./components/comments";
+import Reply from "./components/reply";
 
 function App() {
-
   // CurrentUserDate
   let currentImg = data.currentUser.image.png;
   let currentUser = data.currentUser.username;
-  console.log(data.comments[0].user)
+  console.log(data.comments[0].user);
   // Add CommentsData
   let CommentUser = [data.comments[0], data.comments[1]];
-  let CommentUserName = ['amyrobson', 'maxblagun'];
+  let CommentUserName = ["amyrobson", "maxblagun"];
 
-  
   function MakeComments() {
     return CommentUser.map((person, index) => {
       return (
@@ -28,18 +26,15 @@ function App() {
           user={CommentUserName[index]}
           content={person.content}
         />
-      )
-    } )
+      );
+    });
   }
 
   return (
-      <div className='container h-full m-2 p-3 flex flex-col justify-center items-center gap-2'>
-      
+    <div className="container h-full m-2 p-3 flex flex-col justify-center items-center gap-2">
       {MakeComments()}
-      <div className='replies'>
-        
-      </div>
-        <Current img={currentImg} alt='CurrentImg' user={currentUser}  />
+      <div className="replies"></div>
+      <Current img={currentImg} alt="CurrentImg" user={currentUser} />
     </div>
   );
 }
