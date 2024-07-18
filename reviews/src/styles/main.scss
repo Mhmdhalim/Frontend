@@ -18,19 +18,28 @@ $White: hsl(0, 0%, 100%);
 $primary-color: #3490dc;
 
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     background-color: $Very_light_gray;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    overflow-y: scroll;
 }
 .container {
     width: 600px;
+    height: 100%;
+    
 }
 @media (max-width: 500px) {
     .container {
@@ -85,6 +94,12 @@ body {
     }
 }
 
+.user_ {
+        color: $Moderate_blue;
+        font-weight: 600;
+        background-color: $White;
+    }
+
 #input {
     background-color: $White;
     border-radius: 6px;
@@ -104,4 +119,22 @@ body {
     position: absolute;
     top: 10px;
     font-weight: 400;
+}
+
+.replyuser{
+    @extend .box;
+    width: 85%;
+    margin-left: 50px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.arrow::before{
+    content: "";
+    width: 2px;
+    box-sizing: content-box;
+    height: 120%;
+    background-color: $Light_gray;
+    position: absolute;
+    left: -30px;
+    top: -2px;
 }

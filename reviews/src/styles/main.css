@@ -3,20 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   background-color: hsl(228, 33%, 97%);
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  overflow-y: scroll;
 }
 
 .container {
   width: 600px;
+  height: 100%;
 }
 
 @media (max-width: 500px) {
@@ -24,50 +30,58 @@ body {
     width: 400px;
   }
 }
-.box {
+.box, .replyuser {
   background-color: hsl(0, 0%, 100%);
   border: solid 1px transparent;
   padding: 10px;
   border-radius: 8px;
 }
-.box div,
+.box div, .replyuser div,
 .box div div,
-.box p {
+.box p,
+.replyuser p {
   background-color: hsl(0, 0%, 100%);
 }
-.box p {
+.box p, .replyuser p {
   color: hsl(211, 10%, 45%);
 }
-.box .reply,
-.box .score {
+.box .reply, .replyuser .reply,
+.box .score,
+.replyuser .score {
   color: hsl(238, 40%, 52%);
   font-weight: 500;
 }
-.box .score {
+.box .score, .replyuser .score {
   background-color: hsl(223, 19%, 93%);
 }
-.box .score_ {
+.box .score_, .replyuser .score_ {
   background-color: hsl(223, 19%, 93%);
   width: 60px;
   height: 65;
   max-height: 80px;
   margin-top: 10px;
 }
-.box .score_ span:last-child, .box .score_ span:first-child {
+.box .score_ span:last-child, .replyuser .score_ span:last-child, .box .score_ span:first-child, .replyuser .score_ span:first-child {
   background-color: hsl(223, 19%, 93%);
   color: hsl(238, 40%, 52%);
   opacity: 0.5;
 }
-.box .score_ span:last-child:hover, .box .score_ span:first-child:hover {
+.box .score_ span:last-child:hover, .replyuser .score_ span:last-child:hover, .box .score_ span:first-child:hover, .replyuser .score_ span:first-child:hover {
   opacity: 1;
 }
-.box .createAt {
+.box .createAt, .replyuser .createAt {
   color: hsl(211, 10%, 45%);
   word-spacing: -1px;
 }
-.box .user {
+.box .user, .replyuser .user {
   color: hsl(212, 24%, 26%);
   font-weight: 600;
+}
+
+.user_ {
+  color: hsl(238, 40%, 52%);
+  font-weight: 600;
+  background-color: hsl(0, 0%, 100%);
 }
 
 #input {
@@ -96,4 +110,22 @@ body {
   position: absolute;
   top: 10px;
   font-weight: 400;
+}
+
+.replyuser {
+  width: 85%;
+  margin-left: 50px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.arrow::before {
+  content: "";
+  width: 2px;
+  box-sizing: content-box;
+  height: 120%;
+  background-color: hsl(223, 19%, 93%);
+  position: absolute;
+  left: -30px;
+  top: -2px;
 }/*# sourceMappingURL=main.css.map */
