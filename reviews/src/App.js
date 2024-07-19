@@ -1,13 +1,15 @@
 import React from "react";
-import "./styles/main.scss";
 
+import "./styles/main.scss";
 import data from "./data.json";
+
 import avatars from "./components/avatars.json"
 import Current from "./components/current";
 import Comments from "./components/comments";
+import Newcomment from "./components/newcomment";
 
 function App() {
-  
+
   // Add CommentsData
   let CommentUser = [data.comments[0], data.comments[1]];
   let CommentUserName = ["amyrobson", "maxblagun"];
@@ -24,7 +26,7 @@ function App() {
           img={avatars[index].img}
           user={CommentUserName[index]}
           content={person.content}
-          // Empty or not, have som replies !?
+          // Empty or not, have some replies !?
           replyuser={data.comments[index].replies.length ? true : false}
         />
       );
@@ -34,7 +36,10 @@ function App() {
 
   return (
     <div className="container h-full m-2 p-3 flex flex-col justify-center items-center gap-2">
-      <div className="cmments flex flex-col gap-4">{MakeComments()}</div>
+      <div className="cmments flex flex-col gap-4">
+        {MakeComments()}
+        <Newcomment/>
+      </div>
 
       <div className="replies"></div>
       <Current alt="CurrentImg" />

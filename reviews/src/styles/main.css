@@ -95,20 +95,27 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-#input {
+#input, textarea {
   background-color: hsl(0, 0%, 100%);
   border-radius: 6px;
   border: solid 1px hsl(223, 19%, 93%);
   outline-color: hsl(238, 40%, 52%);
-  padding: 12px;
+  padding: 15px;
   margin: 0 8px;
-  width: 75%;
+  margin-right: 0;
+  width: 90%;
+  height: 50px;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
   color: hsl(212, 24%, 26%);
   opacity: 0.9;
   cursor: pointer;
+}
+
+textarea {
+  max-width: 90%;
+  height: 100px;
+  width: auto;
 }
 
 ::-moz-placeholder {
