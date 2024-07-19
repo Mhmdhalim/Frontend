@@ -45,24 +45,19 @@ export default function Comments(props, {person}) {
             <div className="information flex flex-col">
                 {/* NAV */}
                 <div className="header flex justify-between w-full">
-                <div className="bg-transparent text-white flex items-center align-middle mb-2">
-                    <img
-                    className="rounded bg-transparent color-2 text-sm"
-                    src={props.img}
-                    alt="image_"
-                    />
-                    <p className="user -ml-8 capitalize">{props.user}</p>
-                    <p className="text-black ml-2 createAt">{props.createdAt}</p>
-                </div>
-                <p className="text-blue-700 cursor-pointer">
-                    <img
-                    className="cursor-pointer"
-                    src="../assets/images/icon-reply.svg"
-                    alt=""
-                    />
-                    {/* ADD REPLIES */}
-                    <button className="reply">Reply</button>
-                </p>
+                    <div className="bg-transparent text-white flex items-center align-middle mb-2">
+                        <img
+                        className="rounded bg-transparent color-2 text-sm"
+                        src={props.img}
+                        alt="image_"
+                        />
+                        <p className="user -ml-8 capitalize">{props.user}</p>
+                        <p className="text-black ml-2 createAt">{props.createdAt}</p>
+                    </div>
+                    <p className="text-blue-700 cursor-pointer">
+                        {/* ADD REPLIES */}
+                        <button className="reply">Reply</button>
+                    </p>
                 </div>
                 {/* Content */}
                 <div>

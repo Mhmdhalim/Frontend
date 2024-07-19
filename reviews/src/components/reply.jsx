@@ -1,5 +1,6 @@
 import React from 'react'
 import Replies from './replies';
+import avatars from './avatars.json'
 
 export default function Reply(props) {
     let CommentUserName = ["ramsesmiron", "juliusomo"];
@@ -13,7 +14,7 @@ export default function Reply(props) {
                     score={person.score}
                     createdAt={person.createdAt}
                     replyingTo={person.replyingTo}
-                    img={person.user.image.png}
+                    img={avatars[index+2].img}
                     content={person.content}
                     user={CommentUserName[index]}
                 />

@@ -78,6 +78,16 @@ body {
   color: hsl(212, 24%, 26%);
   font-weight: 600;
 }
+.box img, .replyuser img {
+  width: 30px;
+  margin-right: 40px;
+}
+.box .currentimg, .replyuser .currentimg {
+  transition: transform 2s;
+}
+.box .currentimg.transformed, .replyuser .currentimg.transformed {
+  transform: rotate(360deg) scale(1.5);
+}
 
 .user_ {
   color: hsl(238, 40%, 52%);

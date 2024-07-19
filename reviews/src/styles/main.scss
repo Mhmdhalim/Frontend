@@ -93,6 +93,17 @@ body {
         color: $Dark_blue;
         font-weight: 600;
     }
+    img{
+        width: 30px;
+        margin-right: 40px;
+    }
+    .currentimg{
+        transition: transform 2s;
+        
+    }
+    .currentimg.transformed{
+        transform: rotate(360deg) scale(1.5);
+    }
 }
 
 .user_ {
@@ -139,4 +150,6 @@ body {
     left: -30px;
     top: -2px;
 }
+
+
 

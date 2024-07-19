@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-
 export default function Replies(props) {
   
   // State for current and functions of add und substract
@@ -13,6 +12,7 @@ export default function Replies(props) {
   function handelSubstract() {
     return setscore((prev) => prev - 1);
   }
+  
   return (
     <div className="replyuser">
       <div className="arrow gap-4 w-full flex">
@@ -43,11 +43,6 @@ export default function Replies(props) {
               <p className="text-black ml-2 createAt">{props.createdAt}</p>
             </div>
             <p className="text-blue-700 cursor-pointer">
-              <img
-                className="cursor-pointer"
-                src="../assets/images/icon-reply.svg"
-                alt=""
-              />
               {/* ADD REPLIES */}
               <button className="reply">Reply</button>
             </p>
