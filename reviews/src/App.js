@@ -7,6 +7,7 @@ import avatars from "./components/avatars.json"
 import Current from "./components/current";
 import Comments from "./components/comments";
 import Newcomment from "./components/newcomment";
+import Add from "./components/add";
 
 function App() {
 
@@ -36,7 +37,7 @@ function App() {
 
   return (
     <div className="container h-full m-2 p-3 flex flex-col justify-center items-center gap-2">
-      <div className="cmments flex flex-col gap-4">
+      <div className="comments flex flex-col gap-4">
         {MakeComments()}
         <Newcomment/>
       </div>
