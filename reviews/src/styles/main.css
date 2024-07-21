@@ -57,7 +57,7 @@ body {
 }
 .box .score_, .replyuser .score_ {
   background-color: hsl(223, 19%, 93%);
-  width: 60px;
+  width: 30px;
   height: 65;
   max-height: 80px;
   margin-top: 10px;

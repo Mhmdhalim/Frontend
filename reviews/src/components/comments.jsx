@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Reply from './reply';
 
+
 export default function Comments(props, {person}) {
 
     // State for current and functions of add und substract
