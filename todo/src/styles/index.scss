@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+//Primary
+
+$Bright_Blue: hsl(220, 98%, 61%);
+$Check_Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+// Light Theme
+
+$Very_Light_Gray: hsl(0, 0%, 98%);
+$Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
+$Ligh_Grayish_Blue: hsl(233, 11%, 84%);
+$Dark_Grayish_Blue: hsl(236, 9%, 61%);
+$Very_Dark_Grayish_Blue: hsl(235, 19%, 35%);
+
+// Dark Theme
+
+$Very_Dark_Blue: hsl(235, 21%, 11%);
+$Very_Dark_Desaturated_Blue: hsl(235, 24%, 19%);
+$Light_Grayish_Blue: hsl(234, 39%, 85%);
+$Light_Grayish_Blue_hover: hsl(236, 33%, 92%);
+$Dark_Grayish_Blue: hsl(234, 11%, 52%);
+$Very_Dark_Grayish_Blue: hsl(233, 14%, 35%);
+$Very_Dark_Grayish_Blue_hover: hsl(237, 14%, 26%);
+
+.App{
+    color: $Ligh_Grayish_Blue;
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-color: $Very_Dark_Blue;
+    form{
+        background-color: $Very_Dark_Desaturated_Blue;
+        *{
+            background-color: $Very_Dark_Desaturated_Blue;
+        }
+        button:hover{
+            opacity: .8;
+        }
+    }
+    .newtask{
+        background-color: $Very_Dark_Desaturated_Blue;
+    }
+    .radius_todo{
+        border-radius: 0.25rem;
+        background-color: $Very_Dark_Desaturated_Blue;
+    }
+}
+
+.App.light{
+    color: $Very_Dark_Grayish_Blue;
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-color: $Ligh_Grayish_Blue;
+    @extend .App;
+    form{
+        background-color: $Very_Light_Gray;
+        *{
+            background-color: $Very_Light_Gray;
+        }
+        button{
+            color: hsl(236, 17%, 50%);
+        }
+        button:hover{
+            opacity: .8;
+        }
+    }
+    .newtask{
+        background-color: $Very_Light_Gray;
+        span:first-child{
+            border: solid $Very_Dark_Grayish_Blue 1px;
+        }
+    }
+    .radius_todo{
+        border-radius: 0.25rem;
+        background-color: $Very_Light_Gray;
+    }
+
+    
+}
+
+@media (max-width:400px) {
+    .App{
+        background-image: url(../images/bg-mobile-dark.jpg);
+    }
+    .App.light{
+        background-image: url(../images/bg-mobile-light.jpg);
+    }
+
+}
+
+.checked{
+    background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    opacity: 1;
+}
+.checked + .text_{
+    text-decoration:line-through;
+}

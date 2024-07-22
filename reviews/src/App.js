@@ -32,11 +32,11 @@ function App() {
     });
   }
     // State to hold data from child component
-    const [data1, setData] = useState(null);
+    const [data1, setData] = useState([]);
 
     // Handler function to receive data from child
     const handleDataExport = (exportedData) => {
-      setData(exportedData);
+      setData(...data1, exportedData);
     };
 
   return (
