@@ -14,7 +14,13 @@ export default function AllTasks() {
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
 
+
+    // controll in Showing
     const [filter, setfilter] = useState('all');
+
+    const [blue1, setblue1] = useState(false);
+    const [blue2, setblue2] = useState(false);
+    const [blue3, setblue3] = useState(false);
 
     const createTasks = (value) => {
         setnewTask([
@@ -51,6 +57,7 @@ export default function AllTasks() {
     // controll in Showing
     const getFilteredTasks = () => {
         if (filter === "completed") {
+        
             return newTask.filter((item) => !item.completed);
         }
         if (filter === "active") {
@@ -77,13 +84,45 @@ export default function AllTasks() {
                 <Count numoftasks={newTask.length} />
                 </div>
                 <div className="icons-center">
-                <span onClick={() => setfilter('all')} className="cursor-pointer">All</span>
-                <span onClick={() => setfilter('completed')} className="mx-2 cursor-pointer">Active</span>
-                <span onClick={() => setfilter('active')} className="cursor-pointer">Completed</span>
+                <span
+                    onClick={() => {
+                    setfilter("completed");
+                    setblue1(true);
+                    setblue2(false);
+                    setblue3(false);
+                    }}
+                    className={`cursor-pointer ${blue1 ? "blue" : ""}`}
+                >
+                    All
+                </span>
+                <span
+                    onClick={() => {
+                    setfilter("active");
+                    setblue2(true);
+                    setblue1(false);
+                    setblue3(false);
+                    }}
+                    className={`mx-2 cursor-pointer ${blue2 ? "blue" : ""}`}
+                >
+                    Active
+                </span>
+                <span
+                    onClick={() => {
+                    setfilter("completed");
+                    setblue3(true);
+                    setblue1(false);
+                    setblue2(false);
+                    }}
+                    className={`cursor-pointer ${blue3 ? "blue" : ""}`}
+                >
+                    Completed
+                </span>
                 </div>
-                <div className="clear cursor-pointer" onClick={clearcomplete}>Clear Completed</div>
+                <div className="clear cursor-pointer" onClick={clearcomplete}>
+                Clear Completed
+                </div>
             </div>
             </div>
         </>
-        );
+    );
 }
