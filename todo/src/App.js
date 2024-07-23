@@ -2,13 +2,21 @@ import "./styles/index.scss";
 import Header from "./Components/header";
 import { useState } from "react";
 import AllTasks from "./Components/alltasks.jsx";
+import { useEffect } from "react";
 
 function App() {
 
   // Light Mode
-  const [isOn, setIson] = useState(false);
+  const [isOn, setIson] = useState(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    return savedDarkMode === "true";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", isOn);
+  }, [isOn]);
   const toggle = () => {
-    setIson(!isOn);
+    setIson(prevMode => !prevMode);
   };
 
   return (
