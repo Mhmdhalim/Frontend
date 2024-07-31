@@ -41,6 +41,7 @@ $Very_Dark_Grayish_Blue_hover: hsl(237, 14%, 26%);
 
 .App{
     overflow: scroll;
+    overflow-x: hidden;
     color: $Ligh_Grayish_Blue;
     background-image: url(../images/bg-desktop-dark.jpg);
     background-position: top;

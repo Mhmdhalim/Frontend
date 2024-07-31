@@ -50,20 +50,22 @@ export default function AllTasks() {
     
     // clear complete
     const clearcomplete = () => {
-            console.log(newTask);
         return setnewTask(newTask.filter((item) => item.completed !== true));
     };
     
     // controll in Showing
     const getFilteredTasks = () => {
         if (filter === "completed") {
-        
             return newTask.filter((item) => !item.completed);
         }
-        if (filter === "active") {
+        else if (filter === "active") {
             return newTask.filter((item) => item.completed);
         }
-        return newTask;
+        else if (filter === "all") {
+            return newTask;
+        }
+
+        
     };
 
     return (
@@ -76,7 +78,6 @@ export default function AllTasks() {
                 index={index}
                 removeItem={removeItem}
                 completed={complete}
-                getFilteredTasks={getFilteredTasks}
                 />
             ))}
             <div className="footer flex justify-between p-1.5">
