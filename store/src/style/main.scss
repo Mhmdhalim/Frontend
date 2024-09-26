@@ -119,11 +119,60 @@ nav {
     font-family: "Overpass", sans-serif;
 }
 
-.best_img{
-    transition: all.5s ease;
-}
 
-.best_img:hover{
-    opacity: .9;
-    transform: scale(1.1);
+.product {
+    position: relative; // Ensure the buttons are positioned relative to the product container
+
+    .best_img {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; // Ensure the image has a pointer cursor
+        overflow: hidden;
+        transition: all 0.5s ease;
+
+        &:hover {
+            opacity: 0.9; // Slight opacity change on hover
+            transform: scale(1.05); // Image grows slightly on hover
+
+            // Ensure the buttons also appear when hovering on the image
+            ~ .button_card {
+                opacity: 1; // Make buttons visible
+                transform: translateY(0); // Center the buttons vertically
+                pointer-events: auto; // Enable pointer events when visible
+            }
+        }
+    }
+
+    .button_card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translateY(20px); // Initially hidden slightly below the center
+        opacity: 0; // Hidden by default
+        transition: all 0.3s ease-in-out; // Smooth transition effect
+        display: flex;
+        flex-direction: column;
+        gap: 10px; // Space between the buttons
+
+        button {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #f1f1f1; // Button background color change on hover
+            }
+        }
+    }
+
+    // Ensure the liked span has a cursor pointer as well
+    .liked {
+        cursor: pointer;
+    }
 }

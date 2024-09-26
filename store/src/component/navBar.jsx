@@ -67,7 +67,7 @@ const NavBar = () => {
           >
             <Link
               to="/store"
-              className={` text-lg font-bold ${
+              className={` text-xl font-bold ${
                 scrolling ? "bg-white text-black" : "nav-link"
               }`}
             >
@@ -145,14 +145,14 @@ const NavBar = () => {
               About
             </Link>
             <Link
-              to="/cart"
-              className={` text-xl ${
+              to="/cart" 
+              className={` text-xl  ${
                 scrolling ? "bg-white text-black" : "nav-link"
               }`}
             >
               <FontAwesomeIcon icon={faBagShopping} className="text-[40px]" />
               {cartCount > 0 && (
-                <span className="absolute top-[4.6rem] right-[2.5rem] bg-black text-white text-sm rounded-full px-2">
+                <span className={`absolute top-[2.2rem] right-[8.35rem] ${scrolling ? "bg-white text-black" : "bg-black text-white"} text-sm rounded-full px-2`}>
                   {cartCount}
                 </span>
               )}

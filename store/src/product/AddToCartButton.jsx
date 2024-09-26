@@ -7,7 +7,7 @@ const AddToCartButton = ({ item }) => {
     // Function to handle adding an item to the cart
     const handleAddToCart = () => {
         const cartItem = {
-            img: item.image,
+            img: item.images,
             title: item.title,
             describtion: item.description,
             price: item.price,
@@ -19,7 +19,7 @@ const AddToCartButton = ({ item }) => {
     };
 
     return (
-        <button onClick={handleAddToCart} className="bg-blue-500 text-white py-2 px-4 rounded">
+        <button onClick={handleAddToCart} className="bg-black text-white px-4 py-2 mt-2 rounded w-32">
             Add to Cart
         </button>
     );

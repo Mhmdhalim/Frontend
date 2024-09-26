@@ -102,11 +102,50 @@ nav .nav-link:hover {
   font-family: "Overpass", sans-serif;
 }
 
-.best_img {
-  transition: all 2s ease;
+.product {
+  position: relative;
 }
-
-.best_img:hover {
-  opacity: 0.1;
-  transform: scale(1.1);
+.product .best_img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.product .best_img:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.product .best_img:hover ~ .button_card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.product .button_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product .button_card button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.product .button_card button:hover {
+  background-color: #f1f1f1;
+}
+.product .liked {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
