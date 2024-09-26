@@ -7,6 +7,8 @@ import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
 import img4 from '../assets/img4.jpg';
+
+import homeVideo from '../assets/homeVideo.mp4'
 import AddToCartButton from '../product/AddToCartButton';
 
 const Home = () => {
@@ -62,68 +64,104 @@ const Home = () => {
     return (
         <>
             <div className="main relative">
-                <header>
-                    <NavBar />
-                </header>
-                <section className="first_text absolute sm:top-80 sm:left-20 top-56 left-8">
-                    <p className="uppercase sm:text-4xl text-2xl font-extrabold text-white mb-4">
-                        Discover Innovation,<br />  Elegance, and Style<br /> Where Technology Meets <br /> Timeless Beauty.
+            <header>
+                <NavBar />
+            </header>
+            <section className="first_text absolute sm:top-80 sm:left-20 top-56 left-8">
+                <p className="uppercase sm:text-4xl text-2xl font-extrabold text-white mb-4">
+                Discover Innovation,
+                <br /> Elegance, and Style
+                <br /> Where Technology Meets <br /> Timeless Beauty.
+                </p>
+                <Link to="/store" className="z-0">
+                <button className="bg-white z-0 hover:bg-white text-black py-2 px-4 border-b-4 border-white-700 hover:border-white rounded-full">
+                    Shop Now
+                </button>
+                </Link>
+            </section>
+            </div>
+            {/* Fixed Imgaes */}
+            <div className="flex flex-wrap">
+            <section className="bg-white w-full">
+                <div className="first_images p-8 flex justify-center items-center gap-4 w-full overflow-hidden">
+                <img className="sm:w-1/4 w-1/2" src={img1} alt="" />
+                <img className="sm:w-1/4 w-1/2" src={img2} alt="" />
+                <img className="w-1/4 img3" src={img3} alt="" />
+                <img className="w-1/4 img4" src={img4} alt="" />
+                </div>
+            </section>
+            {/* BEST SELLERS */}
+            <div className="best_seller w-full">
+                <h1 className="head_best_seller uppercase p-6 sm:text-4xl text-2xl font-extrabold">
+                    Best Seller
+                </h1>
+                <div className="best_seller_all flex justify-center items-center gap-4 p-6">
+                {all
+                    .filter(
+                    (_, index) =>
+                        index === 1 || index === 29 || index === 16 || index === 45
+                    )
+                    .map((product, index) => (
+                    <div
+                        key={index}
+                        className="font-bold p-5 product w-1/4 flex flex-col sm:flex-row justify-between gap-4 group"
+                    >
+                        <div className="relative">
+                            <img
+                                className="best_img flex justify-center items-center cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                src={product.images}
+                                alt={product.title}
+                                onClick={() => handleHeartClick(product, index)} // <-- Update to pass product
+                            />
+                        </div>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <AddToCartButton item={product} />
+                                <button
+                                    className="bg-black text-white px-4 py-2 mt-2 rounded w-32"
+                                    onClick={(e) => handleViewDetails(product)}
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        <div>
+                        <div className="cursor-pointer flex justify-between mb-2">
+                            <span
+                            onClick={() => handleHeartClick(product, index)}
+                            className="cursor-pointer text-2xl hover:scale-110 text-black"
+                            >
+                            {liked[index] ? "♥️" : "♡"}
+                            </span>
+                            <p className="font-sans">${product.price}</p>
+                        </div>
+                        <h3>
+                            {product.title.length > 18
+                            ? product.title.slice(0, 17) + "..."
+                            : product.title}
+                        </h3>
+                        </div>
+                    </div>
+                    ))}
+                </div>
+            </div>
+            {/* VIDEO */}
+            <div className="bg-white w-full sm:p-32 p-5 flex justify-center align-middle relative z-0">
+                <video loop autoPlay muted src={homeVideo}></video>
+                <div className="absolute top-96 left-44 z-10 text-[#f6f2e2]">
+                    <p className="sm:w-[500px] w-[200px] font-semibold sm:text-lg text-sm mb-6">
+                        <span className='font-extrabold sm:text-4xl text-2xl mb-3 inline-block'>Mousa Exclusive Collection </span><br />
+                        Step into a realm of unparalleled style and sophistication with
+                        Mousa. Curate your perfect wardrobe with our exquisite selection
+                        of clothing, cutting-edge electronics, and stunning jewelry.
+                        Experience the perfect blend of luxury and modernity. Discover
+                        your unique look today!
                     </p>
-                    <Link to="/store" className='z-0'>
-                        <button className="bg-white z-0 hover:bg-white text-black py-2 px-4 border-b-4 border-white-700 hover:border-white rounded-full">
-                            Shop Now
+                    <Link to="/store" className="z-0">
+                        <button className="bg-white z-0 hover:bg-white text-[#2c2c21] py-2 px-4 border-b-4 border-white-700 hover:border-white rounded-full">
+                        Shop Now
                         </button>
                     </Link>
-                </section>
-            </div>
-            <div className='flex flex-wrap'>
-                <section className='bg-white w-full'>
-                    <div className="first_images p-8 flex justify-center items-center gap-4 w-full overflow-hidden">
-                        <img className='sm:w-1/4 w-1/2' src={img1} alt="" />
-                        <img className='sm:w-1/4 w-1/2' src={img2} alt="" />
-                        <img className='w-1/4 img3' src={img3} alt="" />
-                        <img className='w-1/4 img4' src={img4} alt="" />
-                    </div>
-                </section>
-                <div className="best_seller w-full">
-                    <h1 className="head_best_seller uppercase p-6 text-4xl font-extrabold">Best Seller</h1>
-                    <div className="flex gap-4 p-6">
-                        {all
-                            .filter((_, index) => index === 1 || index === 29 || index === 16 || index === 45)
-                            .map((product, index) => (
-                                <div key={index} className="font-bold p-5 product w-1/4 flex flex-col justify-between gap-4 group">
-                                    <div className="relative">
-                                        <img
-                                            className="best_img flex justify-center items-center cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                            src={product.images}
-                                            alt={product.title}
-                                            onClick={() => handleHeartClick(product, index)} // <-- Update to pass product
-                                        />
-                                    </div>
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                        <AddToCartButton item={product} />
-                                        <button className="bg-black text-white px-4 py-2 mt-2 rounded w-32" onClick={(e) => handleViewDetails(product)}>View Details</button>
-                                    </div>
-                                    <div>
-                                        <div className="cursor-pointer flex justify-between mb-2">
-                                            <span
-                                                onClick={() => handleHeartClick(product, index)}
-                                                className="cursor-pointer text-2xl hover:scale-110 text-black"
-                                            >
-                                                {liked[index] ? '♥️' : '♡'}
-                                            </span>
-                                            <p className="font-sans">${product.price}</p>
-                                        </div>
-                                        <h3>
-                                            {product.title.length > 18
-                                                ? product.title.slice(0, 17) + "..."
-                                                : product.title}
-                                        </h3>
-                                    </div>
-                                </div>
-                            ))}
-                    </div>
                 </div>
+            </div>
             </div>
         </>
     );

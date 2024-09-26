@@ -152,7 +152,7 @@ const NavBar = () => {
             >
               <FontAwesomeIcon icon={faBagShopping} className="text-[40px]" />
               {cartCount > 0 && (
-                <span className={`absolute top-[2.2rem] right-[8.35rem] ${scrolling ? "bg-white text-black" : "bg-black text-white"} text-sm rounded-full px-2`}>
+                <span className={`absolute top-[34px] right-[30.5px] ${scrolling ? "bg-white text-black" : "bg-black text-white"} text-sm rounded-full px-2`}>
                   {cartCount}
                 </span>
               )}

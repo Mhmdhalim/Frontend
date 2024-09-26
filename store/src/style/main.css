@@ -148,4 +148,16 @@ nav .nav-link:hover {
 }
 .product .liked {
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .best_seller_all {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .best_seller_all .product {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -176,3 +176,17 @@ nav {
         cursor: pointer;
     }
 }
+
+
+@media (max-width: 400px) {
+    .best_seller_all {
+        display: flex; // Ensure flex display for horizontal scrolling
+        overflow-x: auto; // Enable horizontal scrolling
+        scroll-snap-type: x mandatory; // Enable scroll snap for better UX
+
+        .product {
+            scroll-snap-align: start; // Snap to each product
+            flex: 0 0 auto; // Prevent flex items from shrinking
+        }
+    }
+}
