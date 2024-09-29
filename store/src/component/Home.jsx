@@ -204,6 +204,7 @@ const Home = () => {
                         {/* Products Display */}
                         <div className="product-list best_seller_all w-full flex justify-center items-center gap-10 p-4">
                         {all
+                            .slice(currentIndex, currentIndex + itemsPerSlide)
                             .map((product, index) => (
                             <div
                                     key={index}
@@ -248,8 +249,9 @@ const Home = () => {
 
                         {/* Next Button */}
                         <button
-                        onClick={nextSlide}
-                        className="absolute right-0 p-3 bg-gray-500 bg-opacity-50 text-white rounded-full hover:bg-opacity-80 z-10"
+                            onClick={nextSlide}
+                            style={{opacity: .4}}
+                        className="absolute right-0 p-3 bg-white bg-opacity-50 text-black rounded-full hover:bg-opacity-80 z-10"
                         >
                         Next
                         </button>
