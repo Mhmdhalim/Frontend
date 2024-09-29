@@ -7,7 +7,7 @@ const AddToCartButton = ({ item }) => {
     // Function to handle adding an item to the cart
     const handleAddToCart = () => {
         const cartItem = {
-            img: item.images,
+            img: item.image,
             title: item.title,
             describtion: item.description,
             price: item.price,

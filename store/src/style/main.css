@@ -154,10 +154,115 @@ nav .nav-link:hover {
   .best_seller_all {
     display: flex;
     overflow-x: auto;
+    flex-direction: column;
     scroll-snap-type: x mandatory;
   }
   .best_seller_all .product {
     scroll-snap-align: start;
     flex: 0 0 auto;
+    width: 300px;
   }
+  .P_video {
+    position: absolute;
+    top: 48px;
+    left: 32px;
+  }
+  .P_video p {
+    width: 185px;
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+  .P_video p span {
+    font-size: 14px;
+  }
+  .video_btn {
+    font-size: 14px;
+    padding: 8 4;
+    border-bottom-width: 2px;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container .product-list {
+  display: flex;
+  transition: transform 2s ease-in-out;
+}
+.carousel-container .product {
+  width: 33.3333333333%;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+.carousel-container .product.slide-in-left {
+  animation: slideInFromLeft 2s forwards;
+}
+.carousel-container .product.slide-in-right {
+  animation: slideInFromRight 2s forwards;
+}
+.carousel-container .product.slide-out-left {
+  animation: slideOutToLeft 2s forwards;
+}
+.carousel-container .product.slide-out-right {
+  animation: slideOutToRight 2s forwards;
+}
+.carousel-container .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-container .button.prev {
+  left: 10px;
+}
+.carousel-container .button.next {
+  right: 10px;
 }/*# sourceMappingURL=main.css.map */
