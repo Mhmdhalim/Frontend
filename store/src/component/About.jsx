@@ -30,13 +30,13 @@ const Store = () => {
                 <section className=" pb-12" id="about">
             <div className="container mx-auto max-w-4xl p-6">
                 <div className="flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 mb-8 lg:mb-0">
+                    {/* <div className="lg:w-1/2 mb-8 lg:mb-0">
                         <img 
                             src={img5}
                             alt="Mousa store" 
                             className="rounded-lg shadow-lg w-full h-auto mb-8"
                         />
-                    </div>
+                    </div> */}
 
                     <div className="lg:w-1/2 lg:pl-8">
                         <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
