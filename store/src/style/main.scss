@@ -65,7 +65,6 @@ nav {
             color: #555555; /* Set a darker gray color for hover effect */
         }
     }
-
 }
 
 /* Ticker scrolling effect */
@@ -105,9 +104,6 @@ nav {
     .main{
         height: screen;
     }
-    .first_images{
-        padding: 8px;
-    }
     .img3, .img4{
         display: none;
     }
@@ -130,7 +126,7 @@ nav {
         justify-content: center;
         align-items: center;
         cursor: pointer; // Ensure the image has a pointer cursor
-        overflow: hidden;
+  
         transition: all 0.5s ease;
 
         &:hover {
@@ -181,8 +177,8 @@ nav {
 @media (max-width: 400px) {
     .best_seller_all {
         display: flex; // Ensure flex display for horizontal scrolling
-        overflow-x: auto; // Enable horizontal scrolling
         flex-direction: column;
+        overflow-x: auto; // Enable horizontal scrolling
         scroll-snap-type: x mandatory; // Enable scroll snap for better UX
 
         .product {
@@ -195,20 +191,18 @@ nav {
     .P_video{
         position: absolute;
         top: 48px;
-        left: 32px;
+        left: 12px;
         p{
-            width: 185px;
+            width: 175px;
             font-size: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 5px;
             span{
                 font-size: 14px;
             }
         }
     }
     .video_btn{
-        font-size: 14px;
-        padding: 8 4;
-        border-bottom-width: 2px;
+        font-size: 10px;
     }
 }
 
@@ -264,10 +258,12 @@ nav {
   .product-list {
     display: flex;
     transition: transform 2s ease-in-out; // Slowed down transition for smoothness
+    overflow-x: auto; // Enable horizontal scrolling
+    scroll-snap-type: x mandatory; // Enable scroll snap for better UX
   }
 
   .product {
-    width: calc(100% / 3); // Show 3 products per screen
+    width: 100%; // Show 3 products per screen
     padding: 1rem;
     box-sizing: border-box;
     opacity: 1;
@@ -310,3 +306,87 @@ nav {
     }
   }
 }
+
+
+// FOOTER
+
+footer{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 400px){
+  footer{
+    flex-direction: column;
+  }
+}
+
+.first_images{
+  display: flex;
+  width: 100%;
+  .small_screen{
+    display: none;
+  }
+  .big_screen{
+    display: flex;
+    gap: 5px;
+    padding-top: 20px;
+  }
+  img{
+    width: 25%;
+  }
+}
+
+@media (max-width: 500px) {
+  .best_seller{
+    padding: 0px;
+  }
+
+  .first_images{
+    display: flex;
+    width: 100%;
+    .small_screen{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      div{
+        display: flex;
+        gap: 5px;
+      }
+    }
+    .big_screen{
+      display: none;
+    }
+    img{
+      width: 50%;
+    }
+  }
+}
+
+.best_seller{
+  padding: 20px;
+}
+
+
+// .P_video{
+//         p{
+//             width: 500px;
+//             font-weight: bold;
+//             font-size: 20px;
+//             line-height: 28px;
+//             margin-bottom: 26px;
+//             span{
+//                 font-size: 36px;
+//                 line-height: 40px;
+//                 padding-bottom: 50px;
+//             }
+            
+//         }
+// }
+// .video_btn{
+//         font-size: 10px;
+// }
+
+  // <p className="sm:w-[500px] w-[200px] font-semibold text-lg sm:mb-6 ">
+  //             <span className="font-extrabold text-4xl mb-3 ">
+  //               Mousa E

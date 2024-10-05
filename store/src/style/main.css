@@ -91,9 +91,6 @@ nav .nav-link:hover {
   .main {
     height: screen;
   }
-  .first_images {
-    padding: 8px;
-  }
   .img3, .img4 {
     display: none;
   }
@@ -112,7 +109,6 @@ nav .nav-link:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  overflow: hidden;
   transition: all 0.5s ease;
 }
 .product .best_img:hover {
@@ -153,8 +149,8 @@ nav .nav-link:hover {
 @media (max-width: 400px) {
   .best_seller_all {
     display: flex;
-    overflow-x: auto;
     flex-direction: column;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
   .best_seller_all .product {
@@ -165,20 +161,18 @@ nav .nav-link:hover {
   .P_video {
     position: absolute;
     top: 48px;
-    left: 32px;
+    left: 12px;
   }
   .P_video p {
-    width: 185px;
+    width: 175px;
     font-size: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
   .P_video p span {
     font-size: 14px;
   }
   .video_btn {
-    font-size: 14px;
-    padding: 8 4;
-    border-bottom-width: 2px;
+    font-size: 10px;
   }
 }
 @keyframes slideInFromLeft {
@@ -229,9 +223,11 @@ nav .nav-link:hover {
 .carousel-container .product-list {
   display: flex;
   transition: transform 2s ease-in-out;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 .carousel-container .product {
-  width: 33.3333333333%;
+  width: 100%;
   padding: 1rem;
   box-sizing: border-box;
   opacity: 1;
@@ -265,4 +261,58 @@ nav .nav-link:hover {
 }
 .carousel-container .button.next {
   right: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 400px) {
+  footer {
+    flex-direction: column;
+  }
+}
+.first_images {
+  display: flex;
+  width: 100%;
+}
+.first_images .small_screen {
+  display: none;
+}
+.first_images .big_screen {
+  display: flex;
+  gap: 5px;
+  padding-top: 20px;
+}
+.first_images img {
+  width: 25%;
+}
+
+@media (max-width: 500px) {
+  .best_seller {
+    padding: 0px;
+  }
+  .first_images {
+    display: flex;
+    width: 100%;
+  }
+  .first_images .small_screen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .first_images .small_screen div {
+    display: flex;
+    gap: 5px;
+  }
+  .first_images .big_screen {
+    display: none;
+  }
+  .first_images img {
+    width: 50%;
+  }
+}
+.best_seller {
+  padding: 20px;
 }/*# sourceMappingURL=main.css.map */
