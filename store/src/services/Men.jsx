@@ -54,7 +54,7 @@ const Store = () => {
 
     if (loading) return <Loading loading={loading} />;
     if (error) return <Error error={error} />;
-    
+
     return (
         <>
             <div className="flex flex-col gap-10 justify-center">
@@ -78,18 +78,24 @@ const Store = () => {
                     {all.slice(0, visibleProducts).map((product, index) => (
                         <div key={index} className="relative p-5 product font-bold group">
                             <div className="relative">
-                                <img
-                                    className="best_img flex justify-center items-center cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                    src={product.images[2]}
-                                    alt={product.title}
-                                />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    <AddToCartButton item={product} />
-                                    <button onClick={(e) => handleViewDetails(product)} className="bg-black text-white px-4 py-2 mt-2 rounded w-32">
-                                        View Details
-                                    </button>
+                                <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                                    <img
+                                    src={product.image}
+                                    alt="Your Alt Text"
+                                    className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                                    />
+                                    <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                                 </div>
-                            </div>
+                                </div>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <AddToCartButton item={product} />
+                                <button
+                                    className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
+                                    onClick={(e) => handleViewDetails(product)}
+                                >
+                                    View Details
+                                </button>
+                                </div>
                             <div className="mt-4">
                                 <div className="cursor-pointer flex justify-between mb-2">
                                     <span

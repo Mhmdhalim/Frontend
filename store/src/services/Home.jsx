@@ -142,17 +142,19 @@ const Home = () => {
                   className="font-bold p-5 product w-1/4 flex flex-col sm:flex-row justify-between gap-4 group"
                 >
                   <div className="relative">
-                    <img
-                      className="best_img z-100 flex justify-center items-center cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-                      src={product.image}
-                      alt={product.title}
-                      onClick={() => handleHeartClick(product, index)} // <-- Update to pass product
-                    />
+                    <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                      <img
+                        src={product.image}
+                        alt="Your Alt Text"
+                        className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                      />
+                      <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
+                    </div>
                   </div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                     <AddToCartButton item={product} />
                     <button
-                      className="bg-black text-white px-4 py-2 mt-2 rounded w-32"
+                      className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
                       onClick={(e) => handleViewDetails(product)}
                     >
                       View Details
@@ -182,19 +184,19 @@ const Home = () => {
         <div className="bg-white w-full p-1 flex justify-center align-middle relative z-0">
           <video loop autoPlay muted src={homeVideo}></video>
           <div className="P_video absolute top-96 left-20 z-10 text-[#f6f2e2]">
-            <p >
-              <span >
+            <p className="sm:text-xl sm:w-[500px] sm:mb-6">
+              <span className="sm:text-4xl sm:font-extrabold sm:my-5">
                 Mousa Exclusive Collection
               </span>
-              <br className="my-9"/>
-                Step into a realm of unparalleled style and sophistication with
-                Mousa. Curate your perfect wardrobe with our exquisite selection
-                of clothing, cutting-edge electronics, and stunning jewelry.
-                Experience the perfect blend of luxury and modernity. Discover
-                your unique look today!
+              <br />
+              Step into a realm of unparalleled style and sophistication with
+              Mousa. Curate your perfect wardrobe with our exquisite selection
+              of clothing, cutting-edge electronics, and stunning jewelry.
+              Experience the perfect blend of luxury and modernity. Discover
+              your unique look today!
             </p>
             <Link to="/store" className="z-0">
-              <button className="video_btn bg-white z-0 hover:bg-white text-[#2c2c21] py-1 px-2  hover:border-white rounded">
+              <button class="bg-white  hover:bg-white text-[#c3c35d] sm:text-xl text-[10px] sm:py-3 sm:px-4 py-1 px-2 sm:border-b-4 sm:border-white-700 hover:border-white rounded-full">
                 Shop Now
               </button>
             </Link>
@@ -244,17 +246,19 @@ const Home = () => {
                     } font-bold p-5 w-full sm:w-1/3 flex flex-col justify-between gap-4 group`}
                   >
                     <div className="relative">
-                      <img
-                        className="best_img w-full h-auto object-cover cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-                        src={product.images}
-                        alt={product.title}
-                        onClick={() => handleHeartClick(product, index)} // <-- Update to pass product
-                      />
+                      <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                        <img
+                          src={product.image}
+                          alt="Your Alt Text"
+                          className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                        />
+                        <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
+                      </div>
                     </div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                       <AddToCartButton item={product} />
                       <button
-                        className="bg-black text-white px-4 py-2 mt-2 rounded w-32"
+                        className="bg-slate-700 text-white px-4 py-2 mt-2 rounded w-32"
                         onClick={(e) => handleViewDetails(product)}
                       >
                         View Details
