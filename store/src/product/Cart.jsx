@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { CartContext } from './cartContext';
-import { PDFDownloadLink, Document, Page, Text, View, Image, StyleSheet } from '@react-pdf/renderer';
+import { PDFDownloadLink, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import NavBar from '../component/navBar';
 import Footer from '../component/Footer';
 
 const Cart = () => {
     const { cart, setCart } = useContext(CartContext);
-    const bg_status = true;
+    const bg_status = false;
 
     // Calculate the total cost for all items in the cart
     const totalCartPrice = cart.reduce((total, item) => total + item.total, 0);

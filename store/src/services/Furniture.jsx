@@ -4,6 +4,9 @@ import { Api } from "../Api/Api";
 import NavBar from "../component/navBar";
 import Footer from "../component/Footer";
 import AddToCartButton from "../product/AddToCartButton";
+import Loading from "../product/Loading";
+import Error from "../product/Error";
+
 export const StoreContext = createContext();
 
 const Furniture = () => {
@@ -11,7 +14,7 @@ const Furniture = () => {
     const [all, setAll] = useState([]);
     const [loading, setLoading] = useState(true); // State to handle loading
     const [error, setError] = useState(null); // State to handle errors
-    const bg_status = true;
+    const bg_status = false;
 
     // Show More Button
     const [visibleProducts, setVisibleProducts] = useState(4); // Initial number of visible products
@@ -48,10 +51,9 @@ const Furniture = () => {
             },
         });
     };
-
-    if (loading) return <p className="flex justify-center items-center h-lvh font-bold text-2xl">Loading...</p>; // Display loading state
-    if (error) return <p className="felx justify-center items-center h-lvh font-bold text-2xl">{error}</p>;
-
+    
+    if (loading) return <Loading loading={loading} />;
+    if (error) return <Error error={error} />;
     return (
         <>
             <div className="flex flex-col gap-10 justify-center">

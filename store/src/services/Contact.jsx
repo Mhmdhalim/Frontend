@@ -2,28 +2,12 @@ import React, { useState, createContext } from "react";
 import NavBar from "../component/navBar";
 import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
+
 export const StoreContext = createContext();
     
 const Store = () => {
-    // State for form inputs
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-    });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission here (send to API, email service, etc.)
-        console.log(formData);
-        alert('Message sent!');
-    };
-    const bg_status = true;
+    const bg_status = false;
 
     return (
         <>

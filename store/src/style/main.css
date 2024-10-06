@@ -315,4 +315,27 @@ footer {
 }
 .best_seller {
   padding: 20px;
+}
+
+@media (max-width: 400px) {
+  .ticker-content {
+    background-color: white;
+    color: #000000;
+  }
+  .ticker-content p {
+    background-color: white;
+    color: #000000;
+  }
+  .ticker {
+    background-color: white;
+    color: #000000;
+  }
+  nav {
+    background-color: white;
+    color: #000000;
+  }
+  nav .mousa_small {
+    background-color: white;
+    color: #000000;
+  }
 }/*# sourceMappingURL=main.css.map */

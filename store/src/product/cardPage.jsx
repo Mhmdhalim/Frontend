@@ -12,9 +12,6 @@ const CardPage = () => {
     const [count, setCount] = useState(1);
     const { addToCart } = useContext(CartContext);
 
-    const increment = () => setCount(count + 1);
-    const decrement = () => count > 1 && setCount(count - 1);
-
     const add_cart = () => {
         const item = {
             img,

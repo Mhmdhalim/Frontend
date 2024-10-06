@@ -3,12 +3,10 @@ import NavBar from "../component/navBar";
 import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
 
-import img5 from '../assets/img5.jpg'
-
 export const StoreContext = createContext();
     
 const Store = () => {
-    const bg_status = true;
+    const bg_status = false;
 
     return (
         <>

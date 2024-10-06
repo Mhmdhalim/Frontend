@@ -35,11 +35,17 @@ const NavBar = (props) => {
     };
   }, []);
   
+  const bg = props.home === "home" ? !props.bg : props.bg;
+
   return (
     <div>
       <div
         className={`h-12 fixed ticker bg-light-gray ${
-          scrolling ? "bg-white text-black" : "text-white"
+          scrolling
+            ? "bg-white text-black"
+            : !bg
+            ? "bg-white text-black"
+            : "text-white"
         }
           
           `}
@@ -47,7 +53,11 @@ const NavBar = (props) => {
         <div className="ticker-content">
           <p
             className={` ${
-              scrolling ? "bg-white text-black" : props.bg ? "text-black" : "text-white"
+              scrolling
+                ? "bg-white text-black"
+                : !bg
+                ? "text-black"
+                : "text-white"
             } 
               
               w-full sm:text-[16px] text-[13px] font-bold text-center whitespace-nowrap`}
@@ -60,19 +70,31 @@ const NavBar = (props) => {
 
       <nav
         className={`p-3 sm:h-16 py-0 text-white transition-all duration-300 ${
-          scrolling ? "bg-white text-black" : props.bg ? "text-black shadow-lg" : "text-white"
+          scrolling
+            ? "bg-white text-black"
+            : bg
+            ? "text-black"
+            : "text-black bg-white shadow-md"
         }`} // Background changes on scroll
       >
         <div className="sm:p-3 p-2 px-6 container mx-auto flex justify-between items-center align-middle">
           <div
             className={`hidden md:flex gap-3 uppercase justify-center items-center ${
-              scrolling ? "bg-white text-black" : props.bg ? "text-black" : "text-white"
+              scrolling
+                ? "bg-white text-black"
+                : bg
+                ? "text-black"
+                : "text-white"
             }`}
           >
             <Link
               to="/store"
               className={` text-xl font-bold ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Shop
@@ -80,7 +102,11 @@ const NavBar = (props) => {
             <Link
               to="/mens"
               className={`text-sm  ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Men
@@ -88,7 +114,11 @@ const NavBar = (props) => {
             <Link
               to="/women"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Women
@@ -96,7 +126,11 @@ const NavBar = (props) => {
             <Link
               to="/Furniture"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Furniture
@@ -104,18 +138,26 @@ const NavBar = (props) => {
             <Link
               to="/electronics"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Electronics
             </Link>
           </div>
 
-          <div className="flex justify-center gap-6 mr-14">
+          <div className=" flex justify-center gap-6 mr-14">
             <Link
               to="/"
-              className={`headnav font-bold uppercase sm:text-5xl text-3xl cursor-pointer tracking-wide ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+              className={`headnav mousa_small font-bold uppercase sm:text-5xl text-3xl cursor-pointer tracking-wide ${
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               M<span className="emoji sm:text-3xl text-2xl">🐸</span> usa
@@ -127,7 +169,11 @@ const NavBar = (props) => {
             <Link
               to="/"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Home
@@ -135,7 +181,11 @@ const NavBar = (props) => {
             <Link
               to="/contact"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               Contact
@@ -143,7 +193,11 @@ const NavBar = (props) => {
             <Link
               to="/about"
               className={` text-sm ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               About
@@ -151,7 +205,11 @@ const NavBar = (props) => {
             <Link
               to="/cart"
               className={` text-xl  ${
-                scrolling ? "bg-white text-black" : props.bg ? "text-black nav-link" : "text-white nav-link"
+                scrolling
+                  ? "bg-white text-black"
+                  : !bg
+                  ? "text-black nav-link"
+                  : "text-white nav-link"
               }`}
             >
               <FontAwesomeIcon icon={faBagShopping} className="text-[40px]" />
@@ -169,7 +227,7 @@ const NavBar = (props) => {
 
           {/* Hamburger Menu for smaller screens */}
           <div
-            className={`md:hidden ${scrolling ? "bg-white text-black" : props.bg ? "text-black " : "text-white "}`}
+            className={` Hamburger md:hidden text-black`}
           >
             <FontAwesomeIcon
               icon={isOpen ? faTimes : faBars}
@@ -181,24 +239,13 @@ const NavBar = (props) => {
           {/* Dropdown Menu for small screens */}
           {isOpen && (
             <div
-              className={`absolute top-12 right-0 ${
-                scrolling ? props.bg ? "text-black bg-white" : "text-black bg-white": "text-black bg-white"
-              } w-full shadow-sm md:hidden`}
+              className={`absolute top-12 right-0 bg-white text-black w-full shadow-sm md:hidden`}
             >
-              <ul className="flex flex-col items-start justify-center px-9">
-                <li className="my-2">
-                  <Link
-                    to="/"
-                    className="hover:text-gray-600 text-xl"
-                    onClick={toggleMenu}
-                  >
-                    Home
-                  </Link>
-                </li>
+              <ul className="flex flex-col items-start justify-center p-10">
                 <li className="my-2">
                   <Link
                     to="/store"
-                    className="hover:text-gray-600 text-xl"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
                     onClick={toggleMenu}
                   >
                     Shop
@@ -206,20 +253,56 @@ const NavBar = (props) => {
                 </li>
                 <li className="my-2">
                   <Link
-                    to="/cart"
-                    className="navbar-cart-link hover:text-gray-600 text-xl"
+                    to="/mens"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
                     onClick={toggleMenu}
                   >
-                    Cart
+                    men
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link
+                    to="/women"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
+                    onClick={toggleMenu}
+                  >
+                    women
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link
+                    to="/Electronics"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
+                    onClick={toggleMenu}
+                  >
+                    electronics
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link
+                    to="/Furniture"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
+                    onClick={toggleMenu}
+                  >
+                    Furniture
                   </Link>
                 </li>
                 <li className="my-2">
                   <Link
                     to="/about"
-                    className="hover:text-gray-600 text-xl"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
                     onClick={toggleMenu}
                   >
-                    About
+                    about
+                  </Link>
+                </li>
+                <li className="my-2">
+                  <Link
+                    to="/contact"
+                    className="uppercase font-bold hover:text-gray-600 text-xl"
+                    onClick={toggleMenu}
+                  >
+                    contact
                   </Link>
                 </li>
               </ul>

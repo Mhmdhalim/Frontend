@@ -368,25 +368,21 @@ footer{
 }
 
 
-// .P_video{
-//         p{
-//             width: 500px;
-//             font-weight: bold;
-//             font-size: 20px;
-//             line-height: 28px;
-//             margin-bottom: 26px;
-//             span{
-//                 font-size: 36px;
-//                 line-height: 40px;
-//                 padding-bottom: 50px;
-//             }
-            
-//         }
-// }
-// .video_btn{
-//         font-size: 10px;
-// }
-
-  // <p className="sm:w-[500px] w-[200px] font-semibold text-lg sm:mb-6 ">
-  //             <span className="font-extrabold text-4xl mb-3 ">
-  //               Mousa E
+@media (max-width: 400px) {
+  .ticker-content{
+    background-color: white;
+    color: #000000;
+    p{
+      @extend .ticker-content;
+    }
+  }
+  .ticker{
+    @extend .ticker-content;
+  }
+  nav{
+      @extend .ticker-content;
+      .mousa_small{
+        @extend .ticker-content;
+    }
+  }
+}

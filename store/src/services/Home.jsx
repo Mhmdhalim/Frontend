@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useWishList } from "../product/wishListContext"; // <-- Import this
+
 import { Api } from "../Api/Api";
 import NavBar from "../component/navBar";
 import Footer from "../component/Footer";
-import { Link, useNavigate } from "react-router-dom";
-import { useWishList } from "../product/wishListContext"; // <-- Import this
+import Loading from "../product/Loading";
+import Error from "../product/Error";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
@@ -26,7 +29,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await Api("https://api.escuelajs.co/api/v1/products");
+        const data = await Api("https://fakestoreapi.com/products");
         setAll(data);
       } catch (error) {
         setError("Failed to fetch products");
@@ -37,7 +40,7 @@ const Home = () => {
 
     fetchData();
   }, []);
-
+  console.log(all)
   const handleHeartClick = (product, index) => {
     setLiked((prevLiked) => ({
       ...prevLiked,
@@ -80,15 +83,14 @@ const Home = () => {
       setCurrentIndex(all.length - itemsPerSlide);
     }
   };
-
-   if (loading) return <p className="flex justify-center items-center h-lvh font-bold text-2xl">Loading...</p>; // Display loading state
-    if (error) return <p className="felx justify-center items-center h-lvh font-bold text-2xl">{error}</p>;
+  if (loading) return <Loading loading={loading}/>;
+  if (error) return <Error error={error}/>
 
   return (
     <>
       <div className="main relative">
         <header>
-          <NavBar bg={bg_status} />
+          <NavBar bg={bg_status} home={"home"} />
         </header>
         <section className="first_text absolute sm:top-80 sm:left-20 top-56 left-8">
           <p className="uppercase sm:text-4xl text-2xl font-extrabold text-white mb-4">
@@ -142,7 +144,7 @@ const Home = () => {
                   <div className="relative">
                     <img
                       className="best_img z-100 flex justify-center items-center cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-                      src={product.images}
+                      src={product.image}
                       alt={product.title}
                       onClick={() => handleHeartClick(product, index)} // <-- Update to pass product
                     />
