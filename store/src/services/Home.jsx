@@ -23,7 +23,7 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
   const bg_status = false;
-  const itemsPerSlide = window.innerWidth > 450 ? 3 : 1;
+  const itemsPerSlide = window.innerWidth > 1000 ? 3 : 1;
   const { addToWishList, wishListItems } = useWishList(); // <-- Use wishlist context
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const Home = () => {
   const handleViewDetails = (product) => {
     navigate("/card-page", {
       state: {
-        img: product.images,
+        img: product.image,
         title: product.title,
         description: product.description,
         price: product.price,
@@ -130,7 +130,7 @@ const Home = () => {
           <h1 className="p-10 px-2 head_best_seller uppercase sm:text-5xl text-2xl font-extrabold">
             Best Seller
           </h1>
-          <div className="sm:p-10 best_seller_all flex justify-center items-center gap-10">
+          <div className="sm:p-10 best_seller_all flex flex-col lg:flex-row  justify-center items-center gap-10">
             {all
               .filter(
                 (_, index) =>
@@ -139,14 +139,14 @@ const Home = () => {
               .map((product, index) => (
                 <div
                   key={index}
-                  className="font-bold p-5 product w-1/4 flex flex-col sm:flex-row justify-between gap-4 group"
+                  className="font-bold p-5 product lg:w-1/4 flex flex-col justify-between gap-4 group"
                 >
                   <div className="relative">
-                    <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                    <div className="best_img h-96 flex justify-center w-full items-center cursor-pointer relative  group">
                       <img
                         src={product.image}
                         alt="Your Alt Text"
-                        className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                        className="w-full h-full  transform transition-transform duration-300 ease-in-out"
                       />
                       <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                     </div>
@@ -181,22 +181,24 @@ const Home = () => {
           </div>
         </div>
         {/* VIDEO */}
-        <div className="bg-white w-full p-1 flex justify-center align-middle relative z-0">
+        <div className="bg-white w-full p-1 flex justify-center items-center align-middle relative z-0">
           <video loop autoPlay muted src={homeVideo}></video>
-          <div className="P_video absolute top-96 left-20 z-10 text-[#f6f2e2]">
-            <p className="sm:text-xl sm:w-[500px] sm:mb-6">
-              <span className="sm:text-4xl sm:font-extrabold sm:my-5">
+          <div className="P_video flex flex-col p-5 justify-center w-full items-left h-full absolute z-10 text-[#f6f2e2]">
+            <div className="lg:text-xl sm:w-[500px] lg:w-[500px] mb-0 lg:mb-6">
+              <span className="w-full lg:text-4xl text-xl font-bold my-0 lg:my-5">
                 Mousa Exclusive Collection
               </span>
               <br />
-              Step into a realm of unparalleled style and sophistication with
-              Mousa. Curate your perfect wardrobe with our exquisite selection
-              of clothing, cutting-edge electronics, and stunning jewelry.
-              Experience the perfect blend of luxury and modernity. Discover
-              your unique look today!
-            </p>
+              <p className="sm:inline-block hidden">
+                Step into a realm of unparalleled style and sophistication with
+                Mousa. Curate your perfect wardrobe with our exquisite selection
+                of clothing, cutting-edge electronics, and stunning jewelry.
+                Experience the perfect blend of luxury and modernity. Discover
+                your unique look today!
+              </p>
+            </div>
             <Link to="/store" className="z-0">
-              <button class="bg-white  hover:bg-white text-[#c3c35d] sm:text-xl text-[10px] sm:py-3 sm:px-4 py-1 px-2 sm:border-b-4 sm:border-white-700 hover:border-white rounded-full">
+              <button class="bg-white  hover:bg-white text-[#c3c35d] lg:text-xl text-[10px] lg:py-3 lg:px-4 py-1 px-2 lg:border-b-4 lg:border-white-700 hover:border-white rounded-full">
                 Shop Now
               </button>
             </Link>
@@ -243,14 +245,14 @@ const Home = () => {
                       slideDirection === "right"
                         ? "slide-in-right"
                         : "slide-in-left"
-                    } font-bold p-5 w-full sm:w-1/3 flex flex-col justify-between gap-4 group`}
+                    } font-bold p-5 w-full lg:w-1/3 flex flex-col justify-between gap-4 group`}
                   >
                     <div className="relative">
-                      <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                      <div className="best_img h-96 p-10 flex justify-center items-center cursor-pointer relative  group">
                         <img
                           src={product.image}
                           alt="Your Alt Text"
-                          className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                          className="max-w-60 h-full transform transition-transform duration-300 ease-in-out"
                         />
                         <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                       </div>
@@ -308,9 +310,7 @@ const Home = () => {
         </div>
 
         {/* FOOTER */}
-        <div className="w-60 sm:w-full">
           <Footer />
-        </div>
       </div>
     </>
   );

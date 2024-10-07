@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { createContext } from "react";
 import NavBar from "../component/navBar";
 import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
@@ -8,7 +8,6 @@ export const StoreContext = createContext();
 const Store = () => {
 
     const bg_status = false;
-
     return (
         <>
             <div className="flex flex-col gap-10 justify-center">
@@ -39,8 +38,7 @@ const Store = () => {
 
                                     <div className="mb-4">
                                         <h4 className="text-xl font-bold">Phone:</h4>
-                                        <p className="text-gray-700">+1 (555) 123-4567</p>
-                                        <p className="text-gray-700">+1 (555) 987-6543</p>
+                                     <p className="text-gray-700">Call us at <a href="tel:+1234567890" className="text-blue-500">+1 (234) 567-890</a></p>
                                     </div>
 
                                     <div className="mb-4">
@@ -50,7 +48,7 @@ const Store = () => {
 
                                     <div className="mb-4">
                                         <h4 className="text-xl font-bold">Email:</h4>
-                                        <p className="text-gray-700">Mousa@mousashop.com</p>
+                                        <p className="text-gray-700">Mousa@mousashop.com</p><p className="text-gray-700">Email us at <a href="mailto:contact@gmail.com" className="text-blue-500">Mousa@gmail.com</a></p>
                                     </div>
                             </div>
                         </div>

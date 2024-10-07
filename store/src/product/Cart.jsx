@@ -10,7 +10,7 @@ const Cart = () => {
 
     // Calculate the total cost for all items in the cart
     const totalCartPrice = cart.reduce((total, item) => total + item.total, 0);
-
+    console.log(cart)
     // Clear cart function
     const clearCart = () => {
         setCart([]);
@@ -123,7 +123,6 @@ const CartPDF = () => (
                                             <th className="border-b border-gray-300 p-4">Product</th>
                                             <th className="border-b border-gray-300 p-4">Quantity</th>
                                             <th className="border-b border-gray-300 p-4">Price per item</th>
-                                            <th className="border-b border-gray-300 p-4 sm:block hidden">Total Price</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -137,7 +136,6 @@ const CartPDF = () => (
                                                 </td>
                                                 <td className="border-b border-gray-300 p-4">{item.count}</td>
                                                 <td className="border-b border-gray-300 p-4">${item.price.toFixed(2)}</td>
-                                                <td className="border-b border-gray-300 p-4 sm:block hidden">${item.total.toFixed(2)}</td>
                                             </tr>
                                         ))}
                                     </tbody>

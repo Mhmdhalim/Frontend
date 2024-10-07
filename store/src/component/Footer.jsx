@@ -6,12 +6,12 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 
 const Footer = () => {
     return (
-        <div className='flex flex-col items-center justify-center'>
+        <div className='flex flex-col flex-nowrap items-center justify-center w-full'>
              {/* SIGN IN */}
                 <div className='mr-0 gap-2 p-5 px-2 h-72 w-full bg-white'>
                     <div className='sm:px-10 px-5  bg-black h-full flex justify-between items-center'>
                         <p className='text-4xl font-bold text-white w-[450px] tracking-wide leading-6'>
-                            Sign up to our newsletter <br /> & get 20% Off
+                            <span className='mb-4 text-4xl font-bold text-white inline-block'>Sign up to our newsletter</span> <br /> & get 20% Off
                         </p>
                         <button class="sm:ml-0 ml-4 bg-white text-center text-gray-800 text-3xl font-bold py-4 px-8 border-y-4 sm:border-r-0 border-r-4 border-black ">
                             SIGN UP FOR FREE
@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* FOOTER */}
-                <footer className='flex justify-between items-start sm:gap-20 gap-5 p-8 px-6 w-full mb-8'>
+                <footer className='flex justify-between flex-wrap items-start sm:gap-20 gap-5 p-8 px-6 w-full mb-8'>
                     <div className='flex flex-col sm:gap-4 gap-2'>
                         <h1 className='font-bold text-lg text-gray-800 '>Mosua</h1>
                         <p className='sm:text-lg text-[14px] w-64'>Style, innovation, and elegance – all in one place. Discover the latest trends, cutting-edge tech, and timeless treasures at Mousa.</p>

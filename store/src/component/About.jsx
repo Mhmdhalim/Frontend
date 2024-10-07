@@ -26,8 +26,8 @@ const Store = () => {
                     </div>
                 </div>
                 <section className=" pb-12" id="about">
-            <div className="container mx-auto max-w-4xl p-6">
-                <div className="flex flex-col lg:flex-row items-center">
+            <div className="container mx-auto max-w-4xl p-6 min-w-350px">
+                <div className="flex flex-col lg:flex-row justify-center items-center">
                     {/* <div className="lg:w-1/2 mb-8 lg:mb-0">
                         <img 
                             src={img5}
@@ -36,7 +36,7 @@ const Store = () => {
                         />
                     </div> */}
 
-                    <div className="lg:w-1/2 lg:pl-8">
+                    <div className=" lg:pl-8">
                         <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
                         <p className="text-gray-700 mb-6">
                             Welcome to Mousa, your go-to shop for the latest in fashion, high-quality electronics, and elegant jewelry. 
@@ -54,17 +54,18 @@ const Store = () => {
                         <ul className="list-disc ml-6 text-gray-700">
                             <li>Fashion-forward clothing for all seasons and styles.</li>
                             <li>Cutting-edge electronics to keep you connected and entertained.</li>
-                            <li>Elegant and timeless jewelry for every occasion.</li>
+                            <li>Elegant and timeless furniture for every occasion.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-left mt-12 lg:pl-8">
                     <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
                     <p className="text-gray-700">Have questions? We'd love to hear from you!</p>
                     <p className="text-gray-700">Email us at <a href="mailto:contact@mousashop.com" className="text-blue-500">Mousa@gmail.com</a></p>
                     <p className="text-gray-700">Call us at <a href="tel:+1234567890" className="text-blue-500">+1 (234) 567-890</a></p>
-                    <p className="text-gray-700">Visit us: 123 Mousa, Mansoura, Egypt</p>
+                    <p className="text-gray-700">Visit us at <a href="https://maps.app.goo.gl/8CtcFqagyidkJqwXA" className="text-blue-500">123 Mousa, Mansoura, Egypt</a></p>
+                    
                 </div>
             </div>
         </section>

@@ -28,7 +28,7 @@ const Furniture = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await Api("https://api.escuelajs.co/api/v1/products");
+                const data = await Api("https://fakestoreapi.com/products");
                 setAll(data); // Set the fetched data
             } catch (error) {
                 setError("Failed to fetch categories"); // Handle errors
@@ -44,7 +44,7 @@ const Furniture = () => {
     const handleViewDetails = (product) => {
         navigate("/card-page", {
             state: {
-            img: product.images,
+            img: product.image,
             title: product.title,
             description: product.description,
             price: product.price,
@@ -74,14 +74,14 @@ const Furniture = () => {
 
                 {/* PRODUCTS */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-20 w-full">
-                    {all.filter(product => product.id > 27 && product.id < 35).slice(0, visibleProducts).map((product, index) => (
+                    {all.slice(0, visibleProducts).map((product, index) => (
                         <div key={index} className="relative p-5 product font-bold group">
                             <div className="relative">
-                                <div className="best_img h-96 p-5 flex justify-center items-center cursor-pointer relative  group">
+                                <div className="best_img h-96 p-2 flex justify-center items-center cursor-pointer relative  group">
                                     <img
                                     src={product.image}
                                     alt="Your Alt Text"
-                                    className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out"
+                                    className="w-full h-full transform transition-transform duration-300 ease-in-out"
                                     />
                                     <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-50"></div>
                                 </div>

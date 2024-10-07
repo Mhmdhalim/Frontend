@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     font-family: "Overpass", sans-serif;
@@ -95,8 +91,9 @@ nav {
 
 
 .main{
-    background-image: url('../assets/christian-koch-mQ4Ty8VmnPk-unsplash.jpg');
+    background-image: url('../assets/aa.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 800px;
 }
@@ -258,7 +255,7 @@ nav {
   .product-list {
     display: flex;
     transition: transform 2s ease-in-out; // Slowed down transition for smoothness
-    overflow-x: auto; // Enable horizontal scrolling
+    overflow-x:hidden; // Enable horizontal scrolling
     scroll-snap-type: x mandatory; // Enable scroll snap for better UX
   }
 
@@ -373,16 +370,20 @@ footer{
     background-color: white;
     color: #000000;
     p{
-      @extend .ticker-content;
+      background-color: white;
+    color: #000000;
     }
   }
   .ticker{
-    @extend .ticker-content;
+    background-color: white;
+    color: #000000;
   }
   nav{
-      @extend .ticker-content;
+      background-color: white;
+    color: #000000;
       .mousa_small{
-        @extend .ticker-content;
+        background-color: white;
+    color: #000000;
     }
   }
 }
@@ -466,4 +467,3 @@ footer{
   background-color: #000000;
   opacity: .5;
 }
-
