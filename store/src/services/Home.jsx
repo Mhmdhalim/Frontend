@@ -105,6 +105,7 @@ const Home = () => {
           </Link>
         </section>
       </div>
+  
       {/* Fixed Imgaes */}
       <div className="flex flex-wrap">
         <div className="first_images flex justify-center p-0 items-center w-full overflow-hidden">
