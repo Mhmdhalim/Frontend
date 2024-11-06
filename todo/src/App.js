@@ -1,4 +1,5 @@
 import "./styles/index.scss";
+import "./styles/output.css";
 import Header from "./Components/header";
 import { useState } from "react";
 import AllTasks from "./Components/alltasks.jsx";

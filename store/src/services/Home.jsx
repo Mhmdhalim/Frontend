@@ -105,7 +105,7 @@ const Home = () => {
           </Link>
         </section>
       </div>
-  
+
       {/* Fixed Imgaes */}
       <div className="flex flex-wrap">
         <div className="first_images flex justify-center p-0 items-center w-full overflow-hidden">
@@ -163,19 +163,13 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="cursor-pointer flex justify-between mb-2">
-                      <span
-                        onClick={() => handleHeartClick(product, index)}
-                        className="cursor-pointer text-2xl hover:scale-110 text-black"
-                      >
-                        {liked[index] ? "♥️" : "♡"}
-                      </span>
+                      <h3>
+                        {product.title.length > 18
+                          ? product.title.slice(0, 17) + "..."
+                          : product.title}
+                      </h3>
                       <p className="font-sans">${product.price}</p>
                     </div>
-                    <h3>
-                      {product.title.length > 18
-                        ? product.title.slice(0, 17) + "..."
-                        : product.title}
-                    </h3>
                   </div>
                 </div>
               ))}
@@ -311,7 +305,7 @@ const Home = () => {
         </div>
 
         {/* FOOTER */}
-          <Footer />
+        <Footer />
       </div>
     </>
   );
