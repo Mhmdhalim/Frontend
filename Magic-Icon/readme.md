@@ -1,1 +1,0 @@
-This's first project .. I used in it JS and Some of bootstrap
