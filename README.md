@@ -4,7 +4,7 @@ Welcome! Here you'll find some of the frontend projects I've built. Each project
 
 ## Projects
 
-### HTML && CSSS
+### HTML && CSS
 
 1. Fylo
    - Brief description: (Fylo is a responsive landing page project designed to showcase a modern file storage and collaboration platform. Built with HTML and CSS.)
