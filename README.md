@@ -8,7 +8,7 @@ Welcome! Here you'll find some of the frontend projects I've built. Each project
 
 1. Fylo
    - Brief description: (Fylo is a responsive landing page project designed to showcase a modern file storage and collaboration platform. Built with HTML and CSS.)
-   - [DEMO](https://github.com/Mhmdhalim/Frontend/Fylo/)
+   - [DEMO](https://github.com/Mhmdhalim/Frontend/Fylo)
 2. Social Links
    - Brief description: (This project is a simple HTML and CSS webpage designed to display user information along with links to their social media profiles.)
    - [DEMO](https://github.com/Mhmdhalim/Frontend/social-links/)
